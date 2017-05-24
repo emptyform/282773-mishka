@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Джамик Каримов](https://up.htmlacademy.ru/adaptive/11/user/282773).
-* Наставник:`Александр Оксанич`.
+* Наставник:[Александр Оксанич](https://htmlacademy.ru/profile/oksanych).
 
 ---
 
