@@ -10,16 +10,16 @@
   <body>
 
     <header class="page-header">
-      <h1 class="page-header__title">Интернет-магазин Мишка</h1><!-- Будет скрыто -->
-      <a href="/" class="page-header__logo">
-        <img src="http://placehold.it/86x35" width="86" height="35" alt="Лого Mishka">
-      </a>
-      <nav class="main-nav">
-        <a href="#" class="main-nav__toggle  main-menu__toggle--close">
-          <span>Меню</span>
+      <div class="page-header__inner">
+        <h1 class="page-header__title">Интернет-магазин Мишка</h1><!-- Будет скрыто -->
+        <a href="#" class="page-header__logo">
+          <img src="http://placehold.it/86x35" width="86" height="35" alt="Лого Mishka">
         </a>
-        <div class="main-nav__dropdown">
-          <div class="main-nav__inner">
+        <nav class="main-nav">
+          <a href="#" class="main-nav__toggle  main-menu__toggle--close">
+            <span>Меню</span>
+          </a>
+          <div class="main-nav__dropdown">
             <ul class="main-menu__list  main-nav__list--main">
               <li class="main-menu__item"><a href="#">Каталог таваров</a></li>
               <li class="main-menu__item"><a href="#">Вязание на заказ</a></li>
@@ -29,10 +29,17 @@
               <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
             </ul>
           </div>
-        </div>
-      </nav>
-
+        </nav>
+      </div>
     </header>
-
+    <section class="promo">
+      <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
+      <a href="#" class="promo__item">
+        <h2 class="promo__title">Предметы<br> интерьера</h2>
+      </a>
+      <a href="#" class="promo__item">
+        <h2 class="promo__title">Детские<br> игрушки</h2>
+      </a>
+    </section>
   </body>
 </html>
