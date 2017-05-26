@@ -11,14 +11,12 @@
 
     <header class="page-header">
       <div class="page-header__inner">
-        <h1 class="page-header__title">Интернет-магазин Мишка</h1><!-- Будет скрыто -->
+        <h1>Интернет-магазин Мишка</h1><!-- Будет скрыто -->
         <a href="#" class="page-header__logo">
           <img src="http://placehold.it/86x35" width="86" height="35" alt="Лого Mishka">
         </a>
         <nav class="main-nav">
-          <a href="#" class="main-nav__toggle  main-menu__toggle--close">
-            <span>Меню</span>
-          </a>
+          <a href="#" class="main-nav__toggle  main-menu__toggle--close"><span>Меню</span></a>
           <div class="main-nav__dropdown">
             <ul class="main-menu__list  main-nav__list--main">
               <li class="main-menu__item"><a href="#">Каталог таваров</a></li>
@@ -32,14 +30,104 @@
         </nav>
       </div>
     </header>
-    <section class="promo">
-      <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
-      <a href="#" class="promo__item">
-        <h2 class="promo__title">Предметы<br> интерьера</h2>
-      </a>
-      <a href="#" class="promo__item">
-        <h2 class="promo__title">Детские<br> игрушки</h2>
-      </a>
-    </section>
+    <div class="page-content">
+    <!-- PROMO -->
+      <section class="promo">
+        <div class="promo__inner">
+          <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
+          <a href="#" class="promo__item">
+            <h2 class="promo__title">Предметы<br> интерьера</h2>
+          </a>
+          <a href="#" class="promo__item">
+            <h2 class="promo__title">Детские<br> игрушки</h2>
+          </a>
+        </div>
+      </section>
+      <!-- FEATURED -->
+      <section class="featured"><!-- article? -->
+        <div class="featured__inner">
+          <h2 class="featured__title">Вязаные корзинки</h2>
+          <h3 class="featured__subtitle">товар недели</h3>
+          <p class="featured__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="featured__property">
+            <tr><!-- классы? -->
+              <td>Цвет</td><!-- и здесь? -->
+              <td>«Тиффани»/серый</td>
+            </tr>
+            <tr>
+              <td>Диаметр</td>
+              <td>25 см</td>
+            </tr>
+            <tr>
+              <td>Высота</td>
+              <td>15 см</td>
+            </tr>
+          </table>
+          <div class="featured__img">
+            <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+          </div>
+          <span class="featured__price">Цена: 990 руб.</span>
+          <a href="#" class="btn  featured__btn">заказать</a>
+        </div>
+      </section>
+      <!-- ABOUT -->
+      <section class="about">
+        <h1>О нас</h1><!-- Будет скрыто -->
+        <div class="about__inner">
+          <div class="about__list"><!-- название классов??? -->
+            <div class="about__item"><!-- название классов??? -->
+              <img src="http://placehold.it/50x30" alt="Цветок" width="50" height="30">
+              <span class="about__item-descr">Экологически чистые материалы</span><!-- название классов??? -->
+            </div>
+            <div class="about__item">
+              <img src="http://placehold.it/50x30" alt="Цена" width="50" height="30">
+              <span class="about__item-descr">Скандинавский стиль по российской цене</span>
+            </div>
+            <div class="about__item">
+              <img src="http://placehold.it/50x30" alt="Лайк" width="50" height="30">
+              <span class="about__item-descr">Увеличивает лайки на фотографиях</span>
+            </div>
+            <div class="about__item">
+              <img src="http://placehold.it/50x30" alt="Клубок вязки" width="50" height="30">
+              <span class="about__item-descr">Связано вручную с любовью и умилением</span>
+            </div>
+            <div class="about__item">
+              <img src="http://placehold.it/50x30" alt="Ракета" width="50" height="30">
+              <span class="about__item-descr">Поддержка отечественного производителя</span>
+            </div>
+            <div class="about__item">
+              <img src="http://placehold.it/50x30" alt="Подарок" width="50" height="30">
+              <span class="about__item-descr">Поставляется в подарочной упаковке</span>
+            </div>
+          </div>
+          <div class="slider">
+            <div class="slider__viewport">
+              <ul class="slider__list">
+                <li class="slider__item">
+                  <p class="slider__descr">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных   инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                  <span class="slider__author">Анастасия Красильникова</span>
+                  <span class="slider__author-instgклассов">@misssssiskras</span>
+                </li>
+                <li class="slider__item">
+                  <p class="slider__descr">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                  <span class="slider__author">Анастасия Красильникова</span>
+                  <span class="slider__author-instg">@misssssiskras</span>
+                </li>
+                <li class="slider__item">
+                  <p class="slider__descr">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                  <span class="slider__author">Анастасия Красильникова</span>
+                  <span class="slider__author-instg">@misssssiskras</span>
+                </li>
+              </ul>
+              <div class="slider__btns">
+                <div class="slider__prev-btn">назад</div>
+                <div class="slider__next-btn">вперед</div>
+              </div>
+              <a href="#" class="btn  about__btn"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
