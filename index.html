@@ -44,13 +44,13 @@
     <!-- PROMO -->
       <section class="promo">
         <div class="promo__inner">
-          <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
+          <h1 class="promo__text">Милые штуки ручной работы для дома</h1>
           <a href="#" class="promo__item">
-            <h2 class="promo__title">Предметы<br> интерьера</h2>
+            <h2 class="promo__item-title">Предметы<br> интерьера</h2>
             <img src="http://placehold.it/60x60" width="60" height="60" alt="">
           </a>
           <a href="#" class="promo__item">
-            <h2 class="promo__title">Детские<br> игрушки</h2>
+            <h2 class="promo__item-title">Детские<br> игрушки</h2>
             <img src="http://placehold.it/60x60" width="60" height="60" alt="">
           </a>
         </div>
@@ -132,8 +132,8 @@
                 </li>
               </ul>
               <div class="slider__btns">
-                <div class="slider__prev-btn">назад</div>
-                <div class="slider__next-btn">вперед</div>
+                <div class="slider__btn  slider__btn--prev">назад</div>
+                <div class="slider__btn  slider__btn--next">вперед</div>
               </div>
               <a href="#" class="btn  about__btn">написать</a>
             </div>
@@ -143,16 +143,14 @@
       <section class="contacts">
         <h2>Контакты</h2><!-- Будет скрыто -->
         <div class="contacts__inner">
-          <h3>Контакты</h3>
-          email:
-          <a href="#" class="contacts__email">info@mimimishkashop.ru</a>
-          адрес:
-          <p class="contacts__adress">
-            г. Санкт-Петербург,<br>
+          <h3 class="contacts__title">Контакты</h3>
+          <span class="contacts__email">email: info@mimimishkashop.ru</span><!-- Надо еще подумать -->
+          <span class="contacts__adress">
+            адрес: г. Санкт-Петербург,<br>
             ул. Большая Конюшенная,<br>
             д. 19/8,<br>
             офис 101
-          </p>
+          </span>
           <div class="contacts__img">
             <img src="http://placehold.it/320x457" width="320" height="457" alt="Адрес на карте">
           </div>
@@ -163,26 +161,34 @@
     <footer class="page-footer">
         <div class="page-footer__inner">
           <div class="page-footer__social-list  social-links">
-            <a href="#" class="social-links__item  social-links__item--i">
-              Инстаграм
+            <a href="#" class="social-links__item  social-links__item--i">Инстаграм
               <img src="http://placehold.it/20x20" width="20" height="20" alt="">
             </a>
-            <a href="#" class="social-links__item  social-links__item--f">
-              Фэйсбук
+            <a href="#" class="social-links__item  social-links__item--f">Фэйсбук
               <img src="http://placehold.it/20x20" width="20" height="20" alt="">
             </a>
-            <a href="#" class="social-links__item  social-links__item--tw">
-              Твиттер
+            <a href="#" class="social-links__item  social-links__item--tw">Твиттер
               <img src="http://placehold.it/20x20" width="20" height="20" alt="">
             </a>
           </div>
-          <div class="page-footer__copyright  copyright">
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-item">
-              Разработано
+          <div class="  page-footer__copyright">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__item">Разработано
               <img src="http://placehold.it/20x20" width="20" height="20" alt="Html academy">
             </a>
           </div>
         </div>
-      </footer>
+    </footer>
+    <div class="modal">
+      <div class="modal__inner">
+        <h2 class="modal__title">добавить в корзину</h2>
+        <span class="modal__subtitle">Выберите размер:</span>
+        <div class="modal__sizes">
+          <span class="modal__sizes-item">S</span>
+          <span class="modal__sizes-item">M</span>
+          <span class="modal__sizes-item">L</span>
+        </div>
+        <a href="#" class="btn  modal__btn">добавить</a>
+      </div>
+    </div>
   </body>
 </html>
