@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интернет-магазин Мишка. Вязаная одежда и аксессуары для всей семьи: женская, мужская и детская.">
+  <meta name="keywords" content="эксклюзивная вязаная одежда, вязаная одежда, вязаная одежда купить, магазин вязаной одежды, вязаный шарф, вязаная одежда +от производителя, вязаная одежда +для женщин, вязаная одежда интернет магазин, модная вязаная одежда, собака одежда, кукла одежда, вязаный трикотаж, купить вязаную">
+  <title>HTML Academy: Мишка-Форма</title>
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <h2>Интернет-магазин Мишка</h2><!-- Будет скрыто -->
+      <a href="index.html" class="logo  page-header__logo">
+        <img src="http://placehold.it/86x35" width="86" height="35" alt="Лого Mishka">
+      </a>
+      <nav class="main-nav">
+        <a href="#" class="main-nav__toggle  main-nav__toggle--close"><span>Меню</span></a>
+        <div class="main-nav__dropdown">
+          <ul class="main-nav__list  main-nav__list--main">
+            <li class="main-nav__item"><a href="catalog.html">Каталог таваров</a></li>
+            <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+          </ul>
+          <ul class="main-nav__list  main-nav__list--user">
+            <li class="main-nav__item">
+              <a href="#">
+                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">
+                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="form-content">
+    <section class="form-promo">
+      <h2>Форма</h2><!-- Скрыто -->
+      <div class="form-promo__inner">
+        <h1>Вязание на заказ</h1>
+      </div>
+    </section>
+    <section class="form">
+      <h2>Форма</h2><!-- Скрыто -->
+      <p class="form__descr">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form action="https://echo.htmlacademy.ru/" method="POST">
+        <div class="form__type">
+          <div class="form__type-item">
+            <input type="radio" name="type1" id="type-field1">
+            <label for="type-field1" class="form__type-text">Аксессуар для интерьера</label>
+          </div>
+          <div class="form__type-item">
+            <input type="radio" name="type1" id="type-field2">
+            <label for="type-field2" class="form__type-text">Детская игрушка</label>
+          </div>
+        </div>
+        <div class="form__color">
+          <div class="form__color-item">
+            <input type="checkbox" id="color-field1">
+            <label for="color-field1" class="form__color-text">Белый</label>
+          </div>
+          <div class="form__color-item">
+            <input type="checkbox" id="color-field2">
+            <label for="color-field2" class="form__color-text">Серый</label>
+          </div>
+          <div class="form__color-item">
+            <input type="checkbox" id="color-field3">
+            <label for="color-field3" class="form__color-text">«Тиффани»</label>
+          </div>
+          <div class="form__color-item">
+            <input type="checkbox" id="color-field4">
+            <label for="color-field4" class="form__color-text">Черный</label>
+          </div>
+          <div class="form__color-item">
+            <input type="checkbox" id="color-field5">
+            <label for="color-field5" class="form__color-text">Розовый</label>
+          </div>
+          <div class="form__color-item">
+            <input type="checkbox" id="color-field6">
+            <label for="color-field6" class="form__color-text">Оранжевый</label>
+          </div>
+        </div>
+        <div class="form-username">
+          <div class="form-username__item">
+            <label for="name-field" class="form-username__item-title">Имя:</label>
+            <input type="text" name="name" id="name-field" class="form-username__input" placeholder="Введите ваше имя*" required>
+          </div>
+          <div class="form-username__item">
+            <label for="lastname-field" class="form-username__item-title">Фамилия:</label>
+            <input type="text" name="last-name" id="lastname-field" class="form-username__input" placeholder="Укажите фамилию*" required>
+          </div>
+          <div class="form-username__item">
+            <label for="middlename-field" class="form-username__item-title">Отчество:</label>
+            <input type="text" name="middle-name" id="middlename-field" class="form-username__input" placeholder="Отчество, если желаете">
+          </div>
+        </div>
+        <div class="form__tel">
+          <label for="tel-field" class="form__tel-title">Тел</label>
+          <input type="tel" name="tel" id="tel-field" class="form__tel-input">
+        </div>
+        <div class="form__email">
+          <label for="email-field" class="form__email-title">E-MAIL</label>
+          <input type="email" name="email" id="email-field" class="form__email-input">
+        </div>
+        <div class="form__additionally">
+          <label for="additionally-field" class="form__additionally-title">Доп</label>
+          <textarea name="additionally" id="additionally-field" class="form__additionally-input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </div>
+        <span>*Поля обязательны для заполнения</span>
+        <button type="submit" class="btn form__btn">отправить заказ</button>
+      </form>
+    </section>
+  </div>
+  <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__social-list  social-links">
+          <a href="#" class="social-links__item  social-links__item--i">Инстаграм
+            <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+          </a>
+          <a href="#" class="social-links__item  social-links__item--f">Фэйсбук
+            <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+          </a>
+          <a href="#" class="social-links__item  social-links__item--tw">Твиттер
+            <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+          </a>
+        </div>
+        <div class="page-footer__copyright">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-item">Разработано
+            <img src="http://placehold.it/20x20" width="20" height="20" alt="Html academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
