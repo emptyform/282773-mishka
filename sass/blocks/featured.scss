@@ -1,0 +1,144 @@
+.featured {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  font-family: $font-family;
+
+  &__wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 5px;
+    font: {
+      size: 25px;
+      weight: bold;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #63d1bb;
+    text-transform: uppercase;
+      font: {
+      size: 17px;
+      weight: bold;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: $btn;
+      font: {
+      size: 15px;
+      weight: normal;
+    }
+  }
+
+  &__property {
+    margin: 0;
+    margin-bottom: 25px;
+    color: $btn;
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 1.3;
+      font: {
+      size: 15px;
+      weight: normal;
+    }
+  }
+
+  &__property-item {
+    border-bottom: 1px solid $main-nav-border;
+
+    td {
+      padding: 10px 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 25px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    text-align: center;
+    color: $btn;
+      font: {
+      size: 17px;
+    }
+    weight: bold;
+  }
+}
+
+@media (min-width: $tablet) {
+  .featured__wrap {
+    position: relative;
+    padding: 0 50px;
+  }
+
+  .descr-wrapper {
+    width: 41.5%;
+    min-width: 320px;
+  }
+
+  .featured__title,
+  .featured__subtitle {
+    display: inline-block;
+    margin-bottom: 55px;
+  }
+
+  .featured__title {
+    font-size: 43px;
+    margin-right: 20%;
+  }
+
+  .featured__subtitle {
+    width: 80px;
+    vertical-align: bottom;
+  }
+
+  .featured__descr {
+    padding-right: 60px;
+  }
+
+  .featured__img {
+    position: absolute;
+    top: 106px;
+    right: 50px;
+    margin-bottom: 0;
+
+    img {
+      width: 333px;
+    }
+  }
+
+  .featured__property {
+    margin-bottom: 91px;
+  }
+}
+
+
+
+
+
+
+
+
