@@ -1,43 +1,12 @@
 .page-header {
-  font-family: $font-family;
+
 
   &__logo {
     display: block;
-    padding: 22px 9.4%;
+    padding: 21px 0px;
     text-align: center;
-    border-bottom: 1px solid $main-nav-border;
   }
 
-  &__title {
-    position: absolute;
-    visibility: hidden;
-    margin: 0;
-  }
+
+
 }
-
-@media (min-width: $tablet) {
-  .page-header__logo {
-    position: absolute;
-    border-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    z-index: 1;
-  }
-
-  .page-header__wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px;
-    box-sizing: border-box;
-  }
-}
-
-@media (min-width: $desktop) {
-  .page-header__logo {
-    left: 50%;
-    transform: translate(-50%);
-  }
-}
-
-

@@ -1,0 +1,17 @@
+.page-footer {
+  margin-top: 40px;
+  background-color: #f1f1f1;
+
+  &__wrap {
+    padding: 24px 9.5%;
+  }
+
+  &__copyright-item {
+    font-size: 1.9rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+  }
+
+}

@@ -1,0 +1,27 @@
+.product-card {
+  border: 1px solid #ededed;
+
+  &__title {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__property {
+    font-size: 1.3rem;
+    line-height: 2.3;
+    color: $featured-font-color;
+  }
+
+  &__price span {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+
+  &__inner {
+    padding: 0 27px;
+  }
+}

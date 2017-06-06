@@ -1,0 +1,21 @@
+.promo-video {
+
+
+  &__wrap {
+    padding: 0 9.5%;
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  &__descr {
+    font-size: 1.3rem;
+    line-height: 1.84;
+  }
+
+    &__inner {
+      border: 1px solid #ededed;
+    }
+}

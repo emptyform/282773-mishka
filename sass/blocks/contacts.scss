@@ -1,0 +1,23 @@
+.contacts {
+  padding-top: 44px;
+
+  &__wrap {
+    padding: 0 9.5%;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+
+  &__email,
+  &__adress {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $slider-descr-font-color;
+  }
+
+  &__img {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,25 @@
+.slider {
+
+
+
+  &__list {
+    @include reset;
+  }
+
+  &__descr,
+  &__author-instg {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $slider-descr-font-color;
+  }
+
+  &__author {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+
+  &__btn {
+    height: 50px;
+  }
+}
