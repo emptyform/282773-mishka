@@ -1,0 +1,29 @@
+.main-nav {
+
+
+  &__list,
+  &__list-user {
+    @include reset();
+  }
+
+  &__link {
+    display: block;
+    line-height: 1.4;
+    padding: 28px 0;
+    text-align: center;
+    color: $link-font-color;
+    text-decoration: none;
+    font: {
+      size: 1.7rem;
+      weight: bold;
+    }
+  }
+
+  &__list {
+
+
+    .main-nav__item:nth-child(n+3) {
+      display: none;
+    }
+  }
+}

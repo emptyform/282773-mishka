@@ -1,0 +1,33 @@
+.promo {
+  background: #fafafa url("../../img/hero-mobile@1x.jpg") no-repeat center 0;
+  padding-top: 75px;
+
+  &__text {
+    margin-bottom: 120px;
+    font-size: 2.7rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  &__item {
+    display: block;
+    padding: 0 30px;
+    background-color: $promo-item-bg;
+
+    &--bg {
+      background-color: #56c3b2;
+    }
+  }
+
+  &__item-title {
+    color: #fff;
+    line-height: 1.25;
+    font: {
+      size: 1.9rem;
+      weight: bold;
+    }
+  }
+}
+
+
+

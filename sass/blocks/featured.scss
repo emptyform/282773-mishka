@@ -1,0 +1,38 @@
+.featured {
+  padding-top: 34px;
+
+  &__wrap {
+    padding: 0 30px;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-size: 1.7rem;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: #63d1bb;
+  }
+
+  &__descr {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: $featured-font-color;
+  }
+
+  &__property {
+    font-size: 1.5rem;
+    line-height: 1.33;
+    color: $featured-font-color;
+  }
+
+  &__price {
+    font-size: 1.7rem;
+    line-height: 1.17;
+    font-weight: bold;
+    color: $featured-font-color;
+  }
+}
