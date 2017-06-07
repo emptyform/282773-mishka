@@ -1,16 +1,16 @@
 .page-footer {
   margin-top: 40px;
-  background-color: #f1f1f1;
+  background-color: $page-footer-bg;
 
   &__wrap {
-    padding: 24px 9.5%;
+    padding: 24px 30px;
   }
 
   &__copyright-item {
     font-size: 1.9rem;
     line-height: 1;
     font-weight: bold;
-    color: #000;
+    color: $link-font-color;
     text-decoration: none;
   }
 

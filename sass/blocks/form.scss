@@ -5,7 +5,7 @@
   font-weight: bold;
 
   &__wrap {
-    padding: 0 9.5%;
+    padding: 0 30px;
   }
 
   &__descr {
@@ -15,32 +15,79 @@
     margin-bottom: 30px;
   }
 
-  fieldset {
-    border-top: 1px solid #62d1ba;
+  &__type,
+  &__color,
+  &__username,
+  &__tel,
+  &__email,
+  &__additionally {
+    border-top: 1px solid $form-border-top-color;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  legend {
+  &__type-title,
+  &__color-title,
+  &__username-title,
+  &__tel-title,
+  &__email-title,
+  &__additionally-title {
     padding-right: 10px;
     color: #63d1bb;
   }
 
-  input {
+  &__username-input,
+  &__tel-input,
+  &__email-input {
     border: 0;
     outline: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid $form-border-bottom-color;
     padding-bottom: 10px;
   }
 
-  &__type input,
-  &__color input {
+  &__type-input,
+  &__color-input {
     display: none;
   }
 
   &__type-item,
   &__color-item {
+    position: relative;
     padding-left: 60px;
+  }
+
+  &__type-text::before {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 9px solid #fff;
+    box-shadow: 0 0 0 3px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__color-text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border: 2px solid $form-border-bottom-color;
+  }
+
+  &__type-item input[type="radio"]:checked ~ .form__type-text::before {
+    background-color: #62d1ba;
+  }
+
+  &__color-item input[type="checkbox"]:checked ~ .form__color-text::before {
+    background: url("../../img/icon-tick.svg") no-repeat center;
   }
 
   &__type-item {
@@ -48,7 +95,7 @@
   }
 
   &__color-item {
-    margin-bottom: 43px;
+    margin-bottom: 40px;
   }
 
   &__username-item {
@@ -59,13 +106,13 @@
   &__username-input,
   &__tel-input,
   &__email-input,
-  &__additionally textarea {
+  &__additionally-input {
     width: 100%;
   }
 
-  &__additionally textarea {
+  &__additionally-input {
     min-height: 138px;
-    border: 2px solid #000;
+    border: 2px solid $form-border-bottom-color;
     box-sizing: border-box;
   }
 

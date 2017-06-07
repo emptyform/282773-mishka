@@ -2,7 +2,7 @@
 
 
   &__wrap {
-    padding: 0 9.5%;
+    padding: 0 30px;
   }
 
   &__title {
@@ -15,7 +15,7 @@
     line-height: 1.84;
   }
 
-    &__inner {
-      border: 1px solid #ededed;
-    }
+  &__inner {
+    border: 1px solid $products-card-border;
+  }
 }

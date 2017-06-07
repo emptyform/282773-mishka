@@ -71,71 +71,70 @@
         </p>
         <form action="https://echo.htmlacademy.ru/" method="POST">
           <fieldset class="form__type">
-            <legend>тип</legend>
+            <legend class="form__type-title">тип</legend>
             <div class="form__type-item">
-              <input type="radio" name="type1" id="type-field1">
+              <input type="radio" name="type1" id="type-field1" class="form__type-input">
               <label for="type-field1" class="form__type-text">Аксессуар для интерьера</label>
             </div>
             <div class="form__type-item">
-              <input type="radio" name="type1" id="type-field2">
+              <input type="radio" name="type1" id="type-field2" class="form__type-input">
               <label for="type-field2" class="form__type-text">Детская игрушка</label>
             </div>
           </fieldset>
           <fieldset class="form__color">
-            <legend>цвет</legend>
+            <legend class="form__color-title">цвет</legend>
             <div class="form__color-item">
-              <input type="checkbox" id="color-field1">
+              <input type="checkbox" id="color-field1" class="form__color-input">
               <label for="color-field1" class="form__color-text">Белый</label>
             </div>
             <div class="form__color-item">
-              <input type="checkbox" id="color-field2">
+              <input type="checkbox" id="color-field2" class="form__color-input">
               <label for="color-field2" class="form__color-text">Серый</label>
             </div>
             <div class="form__color-item">
-              <input type="checkbox" id="color-field3">
+              <input type="checkbox" id="color-field3" class="form__color-input">
               <label for="color-field3" class="form__color-text">«Тиффани»</label>
             </div>
             <div class="form__color-item">
-              <input type="checkbox" id="color-field4">
+              <input type="checkbox" id="color-field4" class="form__color-input">
               <label for="color-field4" class="form__color-text">Черный</label>
             </div>
             <div class="form__color-item">
-              <input type="checkbox" id="color-field5">
+              <input type="checkbox" id="color-field5" class="form__color-input">
               <label for="color-field5" class="form__color-text">Розовый</label>
             </div>
             <div class="form__color-item">
-              <input type="checkbox" id="color-field6">
+              <input type="checkbox" id="color-field6" class="form__color-input">
               <label for="color-field6" class="form__color-text">Оранжевый</label>
             </div>
           </fieldset>
           <fieldset class="form__username">
-            <legend>ФИО</legend>
+            <legend class="form__username-title">ФИО</legend>
             <div class="form__username-item">
-              <label for="name-field" class="form__username-title">Имя:</label>
+              <label for="name-field" class="form__username-text">Имя:</label>
               <input type="text" name="name" id="name-field" class="form__username-input" placeholder="Введите ваше имя*" required>
             </div>
             <div class="form__username-item">
-              <label for="lastname-field" class="form__username-title">Фамилия:</label>
+              <label for="lastname-field" class="form__username-text">Фамилия:</label>
               <input type="text" name="last-name" id="lastname-field" class="form__username-input" placeholder="Укажите фамилию*" required>
             </div>
             <div class="form__username-item">
-              <label for="middlename-field" class="form__username-title">Отчество:</label>
+              <label for="middlename-field" class="form__username-text">Отчество:</label>
               <input type="text" name="middle-name" id="middlename-field" class="form__username-input" placeholder="Отчество, если желаете">
             </div>
           </fieldset>
           <fieldset class="form__tel">
-            <legend>тел</legend>
-            <label for="tel-field" class="form__tel-title">Тел</label>
+            <legend class="form__tel-title">тел</legend>
+            <label for="tel-field" class="form__tel-text">Тел</label>
             <input type="tel" name="tel" id="tel-field" class="form__tel-input">
           </fieldset>
           <fieldset class="form__email">
-            <legend>e-mail</legend>
-            <label for="email-field" class="form__email-title">E-MAIL</label>
+            <legend class="form__email-title">e-mail</legend>
+            <label for="email-field" class="form__email-text">E-MAIL</label>
             <input type="email" name="email" id="email-field" class="form__email-input">
           </fieldset>
           <fieldset class="form__additionally">
-            <legend>доп</legend>
-            <!-- <label for="additionally-field" class="form__additionally-title">Доп</label> -->
+            <legend class="form__additionally-title">доп</legend>
             <textarea name="additionally" id="additionally-field" class="form__additionally-input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <span>*Поля обязательны для заполнения</span>

@@ -1,5 +1,5 @@
 .promo {
-  background: #fafafa url("../../img/hero-mobile@1x.jpg") no-repeat center 0px;
+  background: #fafafa url("../../img/hero-mobile@1x.jpg") no-repeat center 0;
   padding-top: 75px;
 
   &__text {
@@ -11,10 +11,10 @@
 
   &__item {
     display: block;
-    padding: 0 9.5%;
-    background-color: #63d1bb;
+    padding: 0 30px;
+    background-color: $promo-item-bg;
 
-    &:last-child {
+    &--bg {
       background-color: #56c3b2;
     }
   }

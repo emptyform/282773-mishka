@@ -1,11 +1,11 @@
 .product-card {
-  border: 1px solid #ededed;
+  border: 1px solid $products-card-border;
 
   &__title {
     display: block;
     font-size: 1.7rem;
     line-height: 1.4;
-    color: #000;
+    color: $link-font-color;
     text-decoration: none;
   }
 
