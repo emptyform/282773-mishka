@@ -1,0 +1,10 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+}

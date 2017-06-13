@@ -10,9 +10,11 @@
   }
 
   &__item {
-    display: block;
-    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
     background-color: $promo-item-bg;
+    text-decoration: none;
 
     &--bg {
       background-color: #56c3b2;
@@ -26,6 +28,60 @@
       size: 1.9rem;
       weight: bold;
     }
+  }
+
+  &__info {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .promo {
+    border-top: 1px solid $promo-top-border;
+    margin-top: -52px;
+
+    &__wrap {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 1150px;
+      margin: auto;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+
+    &__item {
+      width: 50%;
+      box-sizing: border-box;
+      text-decoration: none;
+      padding: 28px 35px;
+    }
+
+    &__item-title {
+      max-width: 80%;
+    }
+
+    &__info {
+      position: absolute;
+      top: -45px;
+      right: 50px;
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: $btn;
+    }
+
+    &__text {
+      width: 100%;
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo {
+    margin-top: -87px;
   }
 }
 

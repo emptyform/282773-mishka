@@ -1,23 +1,173 @@
 .contacts {
-  padding-top: 44px;
+  padding-top: 35px;
 
-  &__wrap {
+
+  &__descr {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $btn;
+  }
+
+  &__descr,
+  &__wrap-btn {
     padding: 0 30px;
+  }
+
+  &__descr-top {
+    margin-bottom: 30px;
+  }
+
+  &__top-item:last-child {
+    border-bottom:1px solid $form-border-top-color;
+  }
+
+  &__top-item:first-child,
+  &__bottom-item:first-child {
+    margin-right: 28px;
+  }
+
+  &__bottom-item:nth-child(n+3) {
+    display: block;
+    padding-left: 79px;
+  }
+
+  &__descr-bottom {
+    margin-bottom: 35px;
   }
 
   &__title {
     font-size: 1.8rem;
-    line-height: 1.7;
+    line-height: 1.66;
+    margin-bottom: 28px;
   }
 
-  &__email,
-  &__adress {
-    font-size: 1.5rem;
-    line-height: 2;
-    color: $slider-descr-font-color;
-  }
-
-  &__img {
+  &__map {
+    background: url("../../img/map.jpg") no-repeat;
+    padding-bottom: 457px;
     margin-bottom: 40px;
+    background-size: cover;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .contacts {
+    padding-top: 60px;
+
+    &__wrap {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 50px;
+        width: 47px;
+        height: 81px;
+        background-image: url("../../img/icon-flag.svg");
+      }
+    }
+
+    &__descr,
+    &__wrap-btn {
+      padding: 0 50px;
+    }
+
+    &__descr {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.7rem;
+      line-height: 1.76;
+      margin-bottom: 55px;
+    }
+
+    &__descr-top,
+    &__descr-bottom {
+      flex-basis: 200px;
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    &__title {
+      width: 100%;
+      font-size: 4.3rem;
+      line-height: 1.16;
+    }
+
+    &__wrap-btn {
+      text-align: center;
+    }
+
+    &__btn {
+      display: inline-block;
+      padding-left: 39px;
+      padding-right: 39px;
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .contacts {
+    padding-top: 70px;
+    padding-bottom: 85px;
+
+    &__wrap {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 50px;
+      max-width: 1150px;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      &::before {
+        top: 65px;
+        left: 50px;
+      }
+    }
+
+    &__descr,
+    &__wrap-btn {
+      padding: 0;
+    }
+
+    &__descr {
+      display: flex;
+      flex-direction: column;
+      width: 29%;
+      padding-left: 175px;
+      padding-top: 75px;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__descr-top,
+    &__descr-bottom {
+      flex-basis: 0;
+      flex-grow: 0;
+    }
+
+    &__descr-top {
+      margin-bottom: 30px;
+    }
+
+    &__map {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    &__wrap-btn {
+      position: absolute;
+      bottom: 0;
+      left: 225px;
+    }
   }
 }

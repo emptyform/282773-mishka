@@ -1,12 +1,41 @@
 .page-header {
 
 
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 1150px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
   &__logo {
     display: block;
-    padding: 21px 0;
+    padding: 21px 30px;
     text-align: center;
   }
 
 
 
+}
+
+@media (min-width: $tablet) {
+  .page-header__wrap {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-header__logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

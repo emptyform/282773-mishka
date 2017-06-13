@@ -1,25 +1,128 @@
 .slider {
+  position: relative;
 
+  &__viewport {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      user-select: none;
+  }
 
 
   &__list {
     @include reset;
+    position: relative;
+    display: flex;
+    width: calc(100% * 3);
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+    margin-bottom: 25px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
-  &__descr,
-  &__author-instg {
+  &__item {
+      width: calc(100%/3);
+  }
+
+  &__btns {
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 38px;
+  }
+  &__btn {
+    display: inline-block;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    padding: 11px 0;
+    border: 1px solid $main-nav-border;
+  }
+
+  &__descr {
     font-size: 1.5rem;
     line-height: 2;
     color: $slider-descr-font-color;
+    margin-bottom: 30px;
   }
 
   &__author {
+    display: block;
     font-size: 1.7rem;
     line-height: 1.4;
     font-weight: bold;
+    margin-bottom: 5px;
   }
 
-  &__btn {
-    height: 50px;
+
+  &__author-instg {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.76;
+  }
+}
+
+@media (min-width: $tablet)  {
+  .slider {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .slider__btns {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    width: 175px;
+    margin: 0;
+  }
+
+  .slider__btn {
+    border: none;
+  }
+
+  .slider__reviews {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 60px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .slider__author-instg {
+    margin-bottom: 45px;
+  }
+
+  .slider__title {
+    font-size: 4.3rem;
+    margin-bottom: 50px;
+  }
+
+  .slider__descr {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin-bottom: 55px;
+  }
+
+  .slider__author {
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
+
+  .slider__author-instg {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .slider {
+    padding-left: 175px;
   }
 }
