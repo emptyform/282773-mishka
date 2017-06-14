@@ -13,6 +13,7 @@
     display: block;
     padding: 21px 30px;
     text-align: center;
+    border-bottom: 1px solid $promo-top-border;
   }
 
 
@@ -30,6 +31,7 @@
     padding-top: 25px;
     padding-bottom: 25px;
     z-index: 1;
+    border-bottom: none;
   }
 }
 

@@ -1,5 +1,4 @@
 .page-footer {
-  margin-top: 40px;
   background-color: $page-footer-bg;
 
   &__wrap {
@@ -10,7 +9,7 @@
     display: none;
   }
 
-  &__copyright {
+  &__copyright-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +19,34 @@
     color: $link-font-color;
     text-decoration: none;
     padding: 24px 0;
+
+    svg {
+      margin-left: 30px;
+    }
   }
 
+  &__social-list {
+    border-bottom: 1px solid $page-footer-border;
+  }
+}
+
+@media (min-width: $tablet) {
+  .page-footer {
+
+    &__wrap {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 53px 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    &__copyright  {
+      padding: 0;
+    }
+  }
 }

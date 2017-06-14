@@ -8,3 +8,9 @@
     margin-right: 40px;
   }
 }
+
+@media (min-width: $tablet) {
+  .social-links {
+    padding: 0;
+  }
+}

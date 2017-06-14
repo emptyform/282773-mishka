@@ -10,3 +10,39 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: $tablet) {
+  .product {
+
+
+    &__wrap {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .product {
+    margin-bottom: 57px;
+    padding-top: 130px;
+
+    &__wrap {
+      max-width: 1150px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

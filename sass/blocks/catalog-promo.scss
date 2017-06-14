@@ -6,3 +6,23 @@
     text-align: center;
   }
 }
+
+@media (min-width: $tablet) {
+  .catalog-promo {
+    margin-top: -50px;
+    padding: 100px 50px;
+    border-top: 1px solid $promo-top-border;
+
+    &__text {
+      font-size: 4.1rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .catalog-promo {
+    margin-top: -87px;
+    padding: 115px 50px;
+  }
+}
