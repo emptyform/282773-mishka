@@ -12,39 +12,42 @@
     <header class="page-header">
       <div class="page-header__wrap">
         <h2 class="visuallyhidden">Интернет-магазин Мишка</h2>
+
         <a href="#" class="logo  page-header__logo">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Mishka">
         </a>
+
         <nav class="main-nav">
-          <a href="#" class="main-nav__toggle  main-nav__toggle--close">
+          <button type="button" class="main-nav__toggle">
             <img src="img/icon-menu-close.svg" alt="">
-          </a>
-          <div class="main-nav__dropdown">
+          </button>
+          <div class="main-nav__dropdown  main-nav__dropdown--close  main-nav__dropdown--open  main-nav__dropdown--nojs">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="catalog.html" class="main-nav__link">Каталог таваров</a>
+                <a href="catalog.html">Каталог таваров</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Вязание на заказ</a>
+                <a href="#">Вязание на заказ</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Новый поступления</a>
+                <a href="#">Новые поступления</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Распродажа</a>
+                <a href="#">Распродажа</a>
               </li>
             </ul>
-            <ul class="main-nav__list-user">
-              <li class="main-nav__item  main-nav__item--empty">
-                <a href="#" class="main-nav__link  main-nav__link--hidden">
+
+            <ul class="main-nav__user-list">
+              <li class="main-nav__user-item  main-nav__user-item--hidden">
+                <a href="#">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
                     <path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
                   </svg>
                     Поиск по сайту
                 </a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link  main-nav__link--padding">
+              <li class="main-nav__user-item">
+                <a href="#">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
                     <path fill="#d3d2d2" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
                   </svg>
@@ -60,9 +63,11 @@
     <!-- PROMO -->
       <section class="promo">
         <div class="promo__wrap">
+          <span class="promo__info">Бесплатная доставка по России</span>
           <h1 class="promo__text">Милые штуки ручной<br>работы для дома</h1>
+
           <a href="#" class="promo__item">
-            <h2 class="promo__item-title">Предметы<br>  интерьера </h2>
+            <h2 class="promo__item-title">Предметы<br>  интерьера</h2>
             <svg version="1.1" id="svg4488" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.219px" height="62.411px"  viewBox="-259.404 -19.675 40.219 62.411" enable-background="new -259.404 -19.675 40.219 62.411" xml:space="preserve">
               <g fill="#3bb09d">
                 <path d="M-244.227,18.283c-0.286,0.966-0.245,2.191,0.027,3.639c0.494,2.635,1.687,6.041,2.358,9.67h5.062 c0.696-3.641,1.949-7.05,2.471-9.683c0.287-1.445,0.33-2.66,0.041-3.617c-0.275-0.899-0.89-1.618-2.021-2.303h-5.997 C-243.361,16.668-243.96,17.38-244.227,18.283z"/>
@@ -84,29 +89,33 @@
       <!-- FEATURED -->
       <section class="featured">
         <div class="featured__wrap">
-          <h2 class="featured__title">Вязаные корзинки</h2>
-          <h3 class="featured__subtitle">товар недели</h3>
-          <div class="descr-wrapper">
-            <p class="featured__descr">Экологически чистая пряжа, ручная работа.  Доступны в шести расцветках, и трех размерах.</p>
-            <table class="featured__property">
-              <tr class="featured__property-item">
-                <td>Цвет</td>
-                <td>«Тиффани»/серый</td>
-              </tr>
-              <tr class="featured__property-item">
-                <td>Диаметр</td>
-                <td>25 см</td>
-              </tr>
-              <tr class="featured__property-item">
-                <td>Высота</td>
-                <td>15 см</td>
-              </tr>
-            </table>
-            <div class="featured__img">
-              <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+          <h1 class="featured__title">
+            <span class="featured__title-item">Вязаные корзинки</span>
+            <span class="featured__title-item">товар недели</span>
+          </h1>
+          <div class="featured__descr-wrap">
+            <div class="featured__descr-inner">
+              <p class="featured__descr">Экологически чистая пряжа, ручная работа.  Доступны в шести расцветках, и трех размерах.</p>
+              <table class="featured__property">
+                <tr class="featured__property-item">
+                  <td>Цвет</td>
+                  <td>«Тиффани»/серый</td>
+                </tr>
+                <tr class="featured__property-item">
+                  <td>Диаметр</td>
+                  <td>25 см</td>
+                </tr>
+                <tr class="featured__property-item">
+                  <td>Высота</td>
+                  <td>15 см</td>
+                </tr>
+              </table>
             </div>
-            <span class="featured__price">Цена: 990 руб.</span>
-            <a href="#" class="btn  featured__btn">заказать</a>
+            <div class="featured__img"><img src="img/triple-set-mobile@1x.jpg" width="260" height="315"></div>
+            <div class="featured__descr-price-info">
+              <span class="featured__price">Цена: 990 руб.</span>
+              <a href="#" class="btn  featured__btn">заказать</a>
+            </div>
           </div>
         </div>
       </section>
@@ -170,8 +179,9 @@
               <span class="about__item-descr">Поставляется в подарочной упаковке</span>
             </div>
           </div>
-          <h3 class="reviews-title">отзывы</h3>
+
           <div class="slider">
+            <h3 class="slider__title">Отзывы</h3>
             <div class="slider__viewport">
               <ul class="slider__list">
                 <li class="slider__item">
@@ -191,38 +201,45 @@
                 </li>
               </ul>
               <div class="slider__btns">
-                <div class="slider__btn  slider__btn--prev">назад</div>
-                <div class="slider__btn  slider__btn--next">вперед</div>
+                <div class="slider__btn  slider__btn--prev"><img src="img/icon-left-arrow.svg" alt=""></div>
+                <div class="slider__btn  slider__btn--next"><img src="img/icon-right-arrow.svg" alt=""></div>
               </div>
-              <a href="#" class="btn  about__btn">написать</a>
+              <a href="#" class="btn  slider__reviews">написать</a>
             </div>
           </div>
         </div>
       </section>
       <section class="contacts">
-        <!-- <h2 class="contacts__title">Контакты</h2> -->
+        <h2 class="visuallyhidden">Контакты</h2>
         <div class="contacts__wrap">
-          <h3 class="contacts__title">Контакты</h3>
-          <span class="contacts__email">email: info@mimimishkashop.ru</span><!-- Надо еще подумать -->
-          <span class="contacts__adress">
-            адрес: г. Санкт-Петербург,<br>
-            ул. Большая Конюшенная,<br>
-            д. 19/8,<br>
-            офис 101
-          </span>
+          <div class="contacts__descr">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__descr-top">
+              <span class="contacts__top-item">e-mail:</span>
+              <span class="contacts__top-item">info@mimimishkashop.ru</span>
+            </div>
+            <div class="contacts__descr-bottom">
+              <span class="contacts__bottom-item">адрес:</span>
+              <span class="contacts__bottom-item">г. Санкт-Петербург,</span>
+              <span class="contacts__bottom-item">ул. Большая</span>
+              <span class="contacts__bottom-item">Конюшенная,</span>
+              <span class="contacts__bottom-item">д. 19/8, офис 101</span>
+            </div>
+          </div>
+          <div class="contacts__map"></div>
+          <div class="contacts__wrap-btn">
+            <a href="#" class="btn  contacts__btn">напишите нам</a>
+          </div>
         </div>
-          <div class="contacts__img">
-            <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Адрес на карте">
-          </div>
-          <div class="contacts__wrap">
-            <a href="#" class="btn contacts__btn">напишите нам</a>
-          </div>
       </section>
     </div>
     <footer class="page-footer">
       <div class="page-footer__wrap">
+        <a href="#" class="logo  page-footer__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Mishka">
+        </a>
         <div class="page-footer__social-list  social-links">
-          <a href="#" class="social-links__item  social-links__item--i">
+          <a href="#" class="social-links__item">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.769px" height="21.334px" viewBox="53.115 53.19 21.769 21.334" enable-background="new 53.115 53.19 21.769 21.334" xml:space="preserve">
               <g id="instagram">
                 <g>
@@ -232,7 +249,7 @@
               </svg>
 
           </a>
-          <a href="#" class="social-links__item  social-links__item--f">
+          <a href="#" class="social-links__item">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.962px" height="27.718px" viewBox="56.519 49.996 14.962 27.718" enable-background="new 56.519 49.996 14.962 27.718" xml:space="preserve">
               <g id="facebook">
                 <g>
@@ -242,7 +259,7 @@
             </svg>
 
           </a>
-          <a href="#" class="social-links__item  social-links__item--tw">
+          <a href="#" class="social-links__item">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.494px" height="20.168px" viewBox="52.253 53.771 23.494 20.168" enable-background="new 52.253 53.771 23.494 20.168" xml:space="preserve">
               <g id="twitter">
                 <g>
@@ -253,13 +270,11 @@
 
           </a>
         </div>
-        <div class="page-footer__copyright">
           <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-item">Разработано
             <svg fill="#63d1bb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
             </svg>
           </a>
-        </div>
       </div>
     </footer>
 <!--     <div class="modal">
@@ -274,5 +289,7 @@
         <a href="#" class="btn  modal__btn">добавить</a>
       </div>
     </div> -->
+
+    <script src="js/main.js"></script>
   </body>
 </html>

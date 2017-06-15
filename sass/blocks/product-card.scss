@@ -1,12 +1,33 @@
 .product-card {
   border: 1px solid $products-card-border;
 
+  &__descr {
+    padding-bottom: 18px;
+    border-bottom: 1px solid $products-card-border;
+  }
+
+  &__price {
+    padding: 24px 0;
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 25px;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
   &__title {
     display: block;
     font-size: 1.7rem;
     line-height: 1.4;
     color: $link-font-color;
     text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 5px;
   }
 
   &__property {
@@ -15,7 +36,7 @@
     color: $featured-font-color;
   }
 
-  &__price span {
+  &__price-text {
     font-size: 1.5rem;
     line-height: 1.6;
     font-weight: bold;
@@ -23,5 +44,63 @@
 
   &__inner {
     padding: 0 27px;
+  }
+}
+
+@media (min-width: $tablet)  {
+  .product-card {
+    display: flex;
+
+    &__title {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    &__img {
+      margin-bottom: 0;
+
+      img {
+        height: 334px;
+        object-fit: cover;
+      }
+    }
+
+    &__inner {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0 33px;
+    }
+
+    &__descr {
+      padding-top: 25px;
+      flex-grow: 1;
+    }
+
+    &__property {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+
+    &__price-text {
+      font-size: 1.7rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .product-card {
+    flex-direction: column;
+    max-width: 315px;
+
+    &__img {
+
+
+      img {
+        width: 315px;
+        height: 462px;
+      }
+    }
   }
 }
