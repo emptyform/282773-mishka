@@ -1,4 +1,8 @@
 ;(function() {
+
+/*====================================================================
+                                SLIDER
+======================================================================*/
   var slideNow = 1;
   var sliderList = document.querySelector(".slider__list");
   var slideCount = document.querySelector(".slider__list").children.length;
@@ -37,5 +41,37 @@
     prev.addEventListener("click", prevSlide, false);
 
   });
+
+
+/*===============================================================================================================
+                                                DROPDOWN MENU
+================================================================================================================*/
+
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
 
 })()

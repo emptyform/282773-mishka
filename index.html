@@ -13,21 +13,19 @@
       <div class="page-header__wrap">
         <h2 class="visuallyhidden">Интернет-магазин Мишка</h2>
 
-        <a href="#" class="logo  page-header__logo">
+        <a class="logo  page-header__logo">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Mishka">
         </a>
 
-        <nav class="main-nav">
-          <button type="button" class="main-nav__toggle">
-            <img src="img/icon-menu-close.svg" alt="">
-          </button>
-          <div class="main-nav__dropdown  main-nav__dropdown--close  main-nav__dropdown--open  main-nav__dropdown--nojs">
+        <nav class="main-nav  main-nav--closed  main-nav--nojs">
+          <button type="button" class="main-nav__toggle">Меню</button>
+          <div class="main-nav__dropdown">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="catalog.html">Каталог таваров</a>
               </li>
               <li class="main-nav__item">
-                <a href="#">Вязание на заказ</a>
+                <a href="form.html">Вязание на заказ</a>
               </li>
               <li class="main-nav__item">
                 <a href="#">Новые поступления</a>
@@ -122,7 +120,7 @@
       <!-- ABOUT -->
       <section class="about">
         <div class="about__wrap">
-          <h2 class="about__title">Коротко о нас</h2>
+          <h2 class="about__title">Коротко о нас:</h2>
           <div class="about__list">
             <div class="about__item">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="   31.972px" height="37.301px" viewBox="8.014 4.35 31.972 37.301" enable-background="new 8.014 4.35 31.972 37.301" xml:space="preserve">
@@ -226,7 +224,7 @@
               <span class="contacts__bottom-item">д. 19/8, офис 101</span>
             </div>
           </div>
-          <div class="contacts__map"></div>
+          <div id="map" class="contacts__map"></div>
           <div class="contacts__wrap-btn">
             <a href="#" class="btn  contacts__btn">напишите нам</a>
           </div>
@@ -235,7 +233,7 @@
     </div>
     <footer class="page-footer">
       <div class="page-footer__wrap">
-        <a href="#" class="logo  page-footer__logo">
+        <a class="logo  page-footer__logo">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Mishka">
         </a>
         <div class="page-footer__social-list  social-links">
@@ -291,5 +289,27 @@
     </div> -->
 
     <script src="js/main.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2dmfSmAqHCn9fDq5qncEOQloJD_X5Nro&callback=initMap">
+    </script>
+    <script>
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 59.938631, lng: 30.323055},
+          zoom: 17
+        });
+
+        var image = 'img/icon-map-pin.svg';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 59.938631, lng: 30.323055},
+          map: map,
+          title: "интернет-магазин Мишка",
+          icon: image
+        });
+
+      }
+    </script>
   </body>
 </html>

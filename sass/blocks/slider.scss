@@ -20,10 +20,11 @@
     padding: 0;
     transition: .5s;
     transition-timing-function: ease-in-out;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
+
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 2.5rem;
     line-height: 1.2;
   }
@@ -50,7 +51,7 @@
     font-size: 1.5rem;
     line-height: 2;
     color: $slider-descr-font-color;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__author {
@@ -71,7 +72,7 @@
 
 @media (min-width: $tablet)  {
   .slider {
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 40px;
   }
 
@@ -91,7 +92,7 @@
     position: absolute;
     display: inline-block;
     right: 0;
-    top: 60px;
+    top: 90px;
     padding-left: 38px;
     padding-right: 38px;
   }
