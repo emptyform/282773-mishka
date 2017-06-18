@@ -157,7 +157,7 @@
   }
 
   &__color-item input[type="checkbox"]:checked ~ .form__color-text::before {
-    background: url("../../img/icon-tick.svg") no-repeat center;
+    background: url("../img/icon-tick.svg") no-repeat center;
   }
 
   &__type-item:not(:last-child) {
