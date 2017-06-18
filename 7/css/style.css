@@ -1527,7 +1527,7 @@ fieldset {
   .form__type-item input[type="radio"]:checked ~ .form__type-text::before {
     background-color: #62d1ba; }
   .form__color-item input[type="checkbox"]:checked ~ .form__color-text::before {
-    background: url("../../img/icon-tick.svg") no-repeat center; }
+    background: url("../img/icon-tick.svg") no-repeat center; }
   .form__type-item:not(:last-child) {
     margin-bottom: 25px; }
   .form__color-item:not(:last-child) {
