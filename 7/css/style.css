@@ -484,11 +484,23 @@ fieldset {
     line-height: 1.4;
     padding: 28px 30px;
     text-align: center;
-    color: #000000;
+    color: black;
     text-decoration: none;
     font-size: 1.7rem;
     font-weight: bold;
     border-bottom: 1px solid #dfdfdf; }
+    .main-nav__list a:hover,
+    .main-nav__user-list a:hover {
+      color: rgba(0, 0, 0, 0.6); }
+    .main-nav__list a:active,
+    .main-nav__user-list a:active {
+      color: rgba(0, 0, 0, 0.3); }
+  .main-nav__user-item svg {
+    fill: #d3d2d2; }
+  .main-nav__user-item a:hover svg {
+    fill: #63d1bb; }
+  .main-nav__user-item a:active svg {
+    fill: rgba(99, 209, 187, 0.3); }
   .main-nav .main-nav__item:nth-child(n+3) {
     display: none; }
   .main-nav__toggle {
@@ -663,6 +675,8 @@ fieldset {
       box-sizing: border-box;
       text-decoration: none;
       padding: 28px 35px; }
+      .promo__item:hover {
+        transition: .5s; }
     .promo__item-title {
       max-width: 80%; }
     .promo__info {
@@ -737,6 +751,11 @@ fieldset {
     font-weight: bold;
     color: #444444;
     margin-bottom: 25px; }
+  .featured__btn:hover {
+    background-color: #444444;
+    color: white; }
+  .featured__btn:active {
+    color: rgba(255, 255, 255, 0.7); }
 
 @media (min-width: 768px) {
   .featured {
@@ -957,6 +976,15 @@ fieldset {
     text-align: center;
     padding: 11px 0;
     border: 1px solid #ececec; }
+    .slider__btn img:hover {
+      opacity: .6; }
+    .slider__btn img:active {
+      opacity: .3; }
+  .slider__reviews:hover {
+    background-color: #444444;
+    color: white; }
+  .slider__reviews:active {
+    color: rgba(255, 255, 255, 0.7); }
   .slider__descr {
     font-size: 1.5rem;
     line-height: 2;
@@ -1023,7 +1051,13 @@ fieldset {
   .contacts__descr-top {
     margin-bottom: 30px; }
   .contacts__top-item:last-child {
-    border-bottom: 1px solid #62d1ba; }
+    cursor: pointer;
+    border-bottom: 1px solid #46c1ae; }
+    .contacts__top-item:last-child:hover {
+      color: #46c1ae; }
+    .contacts__top-item:last-child:active {
+      border-bottom: 1px solid rgba(70, 193, 174, 0.3);
+      color: rgba(70, 193, 174, 0.3); }
   .contacts__top-item:first-child, .contacts__bottom-item:first-child {
     margin-right: 28px; }
   .contacts__bottom-item:nth-child(n+3) {
@@ -1151,7 +1185,7 @@ fieldset {
     font-size: 1.9rem;
     line-height: 1;
     font-weight: bold;
-    color: #000000;
+    color: black;
     text-decoration: none;
     padding: 23px 0; }
     .page-footer__copyright-item svg {
@@ -1203,7 +1237,10 @@ fieldset {
 
 @media (min-width: 768px) {
   .product__wrap {
-    padding: 0 50px; } }
+    padding: 0 50px; }
+  .product__item:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: .3s; } }
 
 @media (min-width: 1150px) {
   .product {
@@ -1267,6 +1304,9 @@ fieldset {
     -ms-flex-direction: column;
         flex-direction: column;
     padding-bottom: 45px; }
+    .promo-video__inner:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      transition: .3s; }
   .promo-video__header {
     padding-top: 31px;
     padding-bottom: 31px;
@@ -1346,7 +1386,7 @@ fieldset {
     display: block;
     font-size: 1.7rem;
     line-height: 1.4;
-    color: #000000;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 5px; }
@@ -1475,16 +1515,27 @@ fieldset {
     padding-bottom: 33px; }
   .form__type-title, .form__color-title, .form__username-title, .form__tel-title, .form__email-title, .form__additionally-title {
     padding-right: 23px;
-    color: #63d1bb;
+    color: #62d1ba;
     text-transform: uppercase; }
   .form__username-text {
     display: inline-block;
     margin-bottom: 15px; }
+  .form__username-text, .form__type-text, .form__color-text {
+    cursor: pointer; }
   .form__username-input, .form__tel-input, .form__email-input {
     border: 0;
     outline: none;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid black;
     padding-bottom: 15px; }
+    .form__username-input:hover, .form__username-input:focus,
+    .form__username-input:hover ~ svg,
+    .form__username-input:focus ~ svg, .form__tel-input:hover, .form__tel-input:focus,
+    .form__tel-input:hover ~ svg,
+    .form__tel-input:focus ~ svg, .form__email-input:hover, .form__email-input:focus,
+    .form__email-input:hover ~ svg,
+    .form__email-input:focus ~ svg {
+      border-color: #62d1ba;
+      fill: #62d1ba; }
   .form__type-input, .form__color-input {
     display: none; }
   .form__additionally-input::-webkit-input-placeholder, .form__username-input::-webkit-input-placeholder, .form__email-input::-webkit-input-placeholder, .form__tel-input::-webkit-input-placeholder {
@@ -1502,6 +1553,16 @@ fieldset {
   .form__type-item, .form__color-item {
     position: relative;
     padding-left: 60px; }
+  .form__type-text:hover::before {
+    box-shadow: 0 0 0 3px #62d1ba;
+    transition: .2s; }
+  .form__type-text:active::before {
+    box-shadow: 0 0 0 3px #c7c7c7; }
+  .form__color-text:hover::before {
+    border-color: #62d1ba;
+    transition: .2s; }
+  .form__color-text:active::before {
+    border-color: #c7c7c7; }
   .form__type-text::before {
     content: "";
     display: block;
@@ -1523,7 +1584,7 @@ fieldset {
     transform: translateY(-50%);
     width: 36px;
     height: 36px;
-    border: 2px solid #000000; }
+    border: 2px solid black; }
   .form__type-item input[type="radio"]:checked ~ .form__type-text::before {
     background-color: #62d1ba; }
   .form__color-item input[type="checkbox"]:checked ~ .form__color-text::before {
@@ -1538,10 +1599,13 @@ fieldset {
     width: 100%; }
   .form__additionally-input {
     min-height: 138px;
-    border: 2px solid #000000;
+    border: 2px solid black;
     box-sizing: border-box;
     padding: 15px;
-    margin-bottom: 17px; }
+    margin-bottom: 17px;
+    outline: none; }
+    .form__additionally-input:hover, .form__additionally-input:focus {
+      border-color: #62d1ba; }
   .form__required-field {
     display: inline-block;
     font-size: 1.4rem;
@@ -1667,6 +1731,8 @@ fieldset {
   padding: 24px 0; }
   .social-links__item:not(:last-child) {
     margin-right: 40px; }
+  .social-links__item:hover svg {
+    fill: #46c1ae; }
 
 @media (min-width: 768px) {
   .social-links {
