@@ -83,13 +83,19 @@
   &__email-title,
   &__additionally-title {
     padding-right: 23px;
-    color: #63d1bb;
+    color: $form-border-top-color;
     text-transform: uppercase;
   }
 
   &__username-text {
     display: inline-block;
     margin-bottom: 15px;
+  }
+
+  &__username-text,
+  &__type-text,
+  &__color-text {
+    cursor: pointer;
   }
 
   &__username-input,
@@ -99,6 +105,14 @@
     outline: none;
     border-bottom: 2px solid $form-border-bottom-color;
     padding-bottom: 15px;
+
+    &:hover,
+    &:focus,
+    &:hover ~ svg,
+    &:focus ~ svg {
+      border-color: $form-border-top-color;
+      fill: $form-border-top-color;
+    }
   }
 
   &__type-input,
@@ -124,6 +138,24 @@
   &__color-item {
     position: relative;
     padding-left: 60px;
+  }
+
+  &__type-text:hover::before {
+    box-shadow: 0 0 0 3px $form-border-top-color;
+    transition: .2s;
+  }
+
+  &__type-text:active::before {
+    box-shadow: 0 0 0 3px $form-color-border-active;
+  }
+
+  &__color-text:hover::before {
+    border-color: $form-border-top-color;
+    transition: .2s;
+  }
+
+  &__color-text:active::before {
+    border-color: $form-color-border-active;
   }
 
   &__type-text::before {
@@ -185,6 +217,12 @@
     box-sizing: border-box;
     padding: 15px;
     margin-bottom: 17px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $form-border-top-color;
+    }
   }
 
   &__required-field {

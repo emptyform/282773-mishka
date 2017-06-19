@@ -71,6 +71,15 @@
     color: $featured-font-color;
     margin-bottom: 25px;
   }
+
+  &__btn:hover {
+    background-color: $btn;
+    color: $btn-font-color;
+  }
+
+  &__btn:active {
+    color: $btn-color-active;
+  }
 }
 
 @media (min-width: $tablet) {

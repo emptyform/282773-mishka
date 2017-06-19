@@ -64,6 +64,10 @@
       box-sizing: border-box;
       text-decoration: none;
       padding: 28px 35px;
+
+      &:hover {
+        transition: .5s;
+      }
     }
 
     &__item-title {

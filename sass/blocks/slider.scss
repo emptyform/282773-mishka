@@ -8,7 +8,6 @@
       user-select: none;
   }
 
-
   &__list {
     @include reset;
     position: relative;
@@ -45,6 +44,23 @@
     text-align: center;
     padding: 11px 0;
     border: 1px solid $main-nav-border;
+
+    img:hover {
+      opacity: .6;
+    }
+
+    img:active {
+      opacity: .3;
+    }
+  }
+
+  &__reviews:hover {
+    background-color: $btn;
+    color: $btn-font-color;
+  }
+
+  &__reviews:active {
+    color: $btn-color-active;
   }
 
   &__descr {

@@ -19,7 +19,28 @@
     font-size: 1.7rem;
     font-weight: bold;
     border-bottom: 1px solid $promo-top-border;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+
+    &:active {
+      color: $link-color-active;
+    }
   }
+
+  &__user-item svg {
+    fill: #d3d2d2;
+  }
+
+  &__user-item a:hover svg {
+    fill: $user-menu-hover;
+  }
+
+  &__user-item a:active svg {
+    fill: $user-menu-active;
+  }
+
 
   .main-nav__item:nth-child(n+3) {
     display: none;
