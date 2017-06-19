@@ -1,8 +1,9 @@
-;(function() {
-
 /*====================================================================
                                 SLIDER
 ======================================================================*/
+(function() {
+  "use strict";
+
   var slideNow = 1;
   var sliderList = document.querySelector(".slider__list");
   var slideCount = document.querySelector(".slider__list").children.length;
@@ -11,7 +12,7 @@
   var next = document.querySelector(".slider__btn--next");
   var prev = document.querySelector(".slider__btn--prev");
 
-  document.addEventListener('DOMContentLoaded', function(){
+  document.addEventListener('DOMContentLoaded', function() {
       // setInterval(nextSlide, slideInterval);
 
     function nextSlide() {
@@ -41,12 +42,42 @@
     prev.addEventListener("click", prevSlide, false);
 
   });
-
-
 /*===============================================================================================================
-                                                DROPDOWN MENU
+                                                MODAL
 ================================================================================================================*/
+    var modal = document.getElementById("popup");
+    var modalBtnShow = document.querySelector(".featured__btn");
+    var modalBtnHide = document.querySelector(".modal__btn");
+    var wrapper = document.querySelector(".wrapper");
+    var basket = document.querySelectorAll(".product-card__basket");
 
+      function creatOverlay() {
+        var docHeight = document.body.offsetHeight;
+        wrapper.classList.add("wrap-visible");
+        wrapper.style.height = docHeight + "px";
+      }
+
+      function showModal(event) {
+        event.preventDefault();
+
+        creatOverlay();
+        modal.classList.add("modal--visible");
+      }
+
+      function hideModal(event) {
+        event.preventDefault();
+        modal.classList.remove("modal--visible");
+        wrapper.classList.remove("wrap-visible")
+        wrapper.style.height = 0;
+      }
+
+      modalBtnShow.addEventListener("click", showModal, false);
+      modalBtnHide.addEventListener("click", hideModal, false);
+      wrapper.addEventListener("click", hideModal, false);
+      // basket.addEventListener("click", showModal, false);
+/*-----------------------------------------------------------------------------------
+                                          DROPDOWN
+-------------------------------------------------------------------------------------*/
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -60,18 +91,22 @@
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
       }
+/*--------------------------------------------------------------------------
+                              GOOGLE MAPS API
+-----------------------------------------------------------------------------*/
+  function initMap() {
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 59.938631, lng: 30.323055},
+      zoom: 17
     });
 
-      // function initMap() {
-      //   var uluru = {lat: -25.363, lng: 131.044};
-      //   var map = new google.maps.Map(document.getElementById('map'), {
-      //     zoom: 4,
-      //     center: uluru
-      //   });
-      //   var marker = new google.maps.Marker({
-      //     position: uluru,
-      //     map: map
-      //   });
-      // }
+    var image = 'img/icon-map-pin.svg';
+    var beachMarker = new google.maps.Marker({
+      position: {lat: 59.938631, lng: 30.323055},
+      map: map,
+      title: "интернет-магазин Мишка",
+      icon: image
+    });
 
-})()
+})();
