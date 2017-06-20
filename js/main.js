@@ -1,53 +1,24 @@
-/*====================================================================
-                                SLIDER
-======================================================================*/
 (function() {
-  // "use strict";
 
-  var slideNow = 1;
-  var sliderList = document.querySelector(".slider__list");
-  var slideCount = document.querySelector(".slider__list").children.length;
-  var translateWidth = 0;
-  // var slideInterval = 5000;
-  var next = document.querySelector(".slider__btn--next");
-  var prev = document.querySelector(".slider__btn--prev");
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
-  document.addEventListener('DOMContentLoaded', function() {
-      // setInterval(nextSlide, slideInterval);
+    navMain.classList.remove('main-nav--nojs');
 
-    function nextSlide() {
-        if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-            sliderList.style.transform = "translate(0, 0)";
-            slideNow = 1;
-        } else {
-            translateWidth = -document.querySelector(".slider__viewport").offsetWidth * slideNow;
-            sliderList.style.transform = "translate("+ translateWidth + "px, 0)";
-            slideNow++;
-        }
-    };
-
-    function prevSlide() {
-        if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-            translateWidth = -document.querySelector(".slider__viewport").offsetWidth * (slideCount - 1);
-            sliderList.style.transform = "translate("+ translateWidth + "px, 0)";
-            slideNow = slideCount;
-        } else {
-            translateWidth = -document.querySelector(".slider__viewport").offsetWidth * (slideNow - 2);
-            sliderList.style.transform = "translate("+ translateWidth + "px, 0)";
-            slideNow--;
-        }
-    };
-
-      next.addEventListener("click", nextSlide, false);
-      prev.addEventListener("click", prevSlide, false);
-
-  });
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
 
 })();
-/*===============================================================================================================
-                                                MODAL
-================================================================================================================*/
-(function() {
+
+
+// (function() {
 
     var modal = document.getElementById("popup");
     var modalBtnShow = document.querySelector(".featured__btn");
@@ -76,42 +47,86 @@
         wrapper.style.height = 0;
       }
 
-      modalBtnShow.addEventListener("click", showModal, false);
-      modalBtnHide.addEventListener("click", hideModal, false);
+      if (modalBtnShow) {
+        modalBtnShow.addEventListener("click", showModal, false);
+      }
+
+      if (basket) {
+        basket.forEach(function(item) {
+          item.addEventListener("click", showModal, false);
+        });
+      }
+
+      // modalBtnHide.addEventListener("click", hideModal, false);
       wrapper.addEventListener("click", hideModal, false);
-      basket.forEach(function(item) {
-        item.addEventListener("click", showModal, false);
-      });
+
+
+// })();
+
+
+/*====================================================================
+                                SLIDER
+======================================================================*/
+(function() {
+  // "use strict";
+
+  var isTrue = document.querySelector(".slider");
+
+  if (isTrue) {
+    var slideNow = 1;
+    var sliderList = document.querySelector(".slider__list");
+    var slideCount = document.querySelector(".slider__list").children.length;
+    var translateWidth = 0;
+    // var slideInterval = 5000;
+    var next = document.querySelector(".slider__btn--next");
+    var prev = document.querySelector(".slider__btn--prev");
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // setInterval(nextSlide, slideInterval);
+
+      function nextSlide() {
+          if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
+              sliderList.style.transform = "translate(0, 0)";
+              slideNow = 1;
+          } else {
+              translateWidth = -document.querySelector(".slider__viewport").offsetWidth * slideNow;
+              sliderList.style.transform = "translate("+ translateWidth + "px, 0)";
+              slideNow++;
+          }
+      };
+
+      function prevSlide() {
+          if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
+              translateWidth = -document.querySelector(".slider__viewport").offsetWidth * (slideCount - 1);
+              sliderList.style.transform = "translate("+ translateWidth + "px, 0)";
+              slideNow = slideCount;
+          } else {
+              translateWidth = -document.querySelector(".slider__viewport").offsetWidth * (slideNow - 2);
+              sliderList.style.transform = "translate("+ translateWidth + "px, 0)";
+              slideNow--;
+          }
+      };
+
+        next.addEventListener("click", nextSlide, false);
+        prev.addEventListener("click", prevSlide, false);
+
+    });
+  }
 
 })();
+/*===============================================================================================================
+                                                MODAL
+================================================================================================================*/
 
 
 /*-----------------------------------------------------------------------------------
                                           DROPDOWN
 -------------------------------------------------------------------------------------*/
-(function() {
-
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-
-})();
 
 /*--------------------------------------------------------------------------
                               GOOGLE MAPS API
 -----------------------------------------------------------------------------*/
- (function() {
+ // (function() {
     var image = 'img/icon-map-pin.svg';
 
     function initMap() {
@@ -128,7 +143,7 @@
       });
     };
 
-})();
+// })();
 
 
 
