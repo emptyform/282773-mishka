@@ -1,3 +1,6 @@
+/*-----------------------------------------------------------------------------------
+                                          DROPDOWN
+-------------------------------------------------------------------------------------*/
 (function() {
 
     var navMain = document.querySelector('.main-nav');
@@ -16,16 +19,16 @@
     });
 
 })();
-
-
-// (function() {
+/*===============================================================================================================
+                                                MODAL
+================================================================================================================*/
+(function() {
 
     var modal = document.getElementById("popup");
     var modalBtnShow = document.querySelector(".featured__btn");
     var modalBtnHide = document.querySelector(".modal__btn");
     var wrapper = document.querySelector(".wrapper");
     var basket = document.querySelectorAll(".product-card__basket");
-    // console.log(basket)
 
       function creatOverlay() {
         var docHeight = document.body.offsetHeight;
@@ -47,23 +50,19 @@
         wrapper.style.height = 0;
       }
 
-      if (modalBtnShow) {
+      if (modalBtnShow && wrapper) {
         modalBtnShow.addEventListener("click", showModal, false);
+        wrapper.addEventListener("click", hideModal, false);
       }
 
-      if (basket) {
+      if (basket && wrapper) {
         basket.forEach(function(item) {
           item.addEventListener("click", showModal, false);
         });
+        wrapper.addEventListener("click", hideModal, false);
       }
 
-      // modalBtnHide.addEventListener("click", hideModal, false);
-      wrapper.addEventListener("click", hideModal, false);
-
-
-// })();
-
-
+})();
 /*====================================================================
                                 SLIDER
 ======================================================================*/
@@ -72,17 +71,14 @@
 
   var isTrue = document.querySelector(".slider");
 
-  if (isTrue) {
+  if (isTrue) { // Для работы слайдера только на главной
     var slideNow = 1;
     var sliderList = document.querySelector(".slider__list");
     var slideCount = document.querySelector(".slider__list").children.length;
-    var translateWidth = 0;
-    // var slideInterval = 5000;
     var next = document.querySelector(".slider__btn--next");
     var prev = document.querySelector(".slider__btn--prev");
 
     document.addEventListener('DOMContentLoaded', function() {
-        // setInterval(nextSlide, slideInterval);
 
       function nextSlide() {
           if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
@@ -114,36 +110,25 @@
   }
 
 })();
-/*===============================================================================================================
-                                                MODAL
-================================================================================================================*/
-
-
-/*-----------------------------------------------------------------------------------
-                                          DROPDOWN
--------------------------------------------------------------------------------------*/
-
 /*--------------------------------------------------------------------------
                               GOOGLE MAPS API
 -----------------------------------------------------------------------------*/
- // (function() {
-    var image = 'img/icon-map-pin.svg';
+var image = 'img/icon-map-pin.svg';
 
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 59.938631, lng: 30.323055},
-        zoom: 17
-      });
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 59.938631, lng: 30.323055}, //Координаты
+    zoom: 17
+  });
 
-      var beachMarker = new google.maps.Marker({
-        position: {lat: 59.938631, lng: 30.323055},
-        map: map,
-        title: "интернет-магазин Мишка",
-        icon: image
-      });
-    };
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 59.938631, lng: 30.323055},
+    map: map,
+    title: "интернет-магазин Мишка",
+    icon: image
+  });
+};
 
-// })();
 
 
 
