@@ -234,8 +234,18 @@
   }
 
   &__btn {
+    cursor: pointer;
     width: 100%;
     background-color: transparent;
+
+    &:hover {
+      background-color: $btn;
+      color: $btn-font-color;
+    }
+
+    &:active {
+      color: $btn-color-active;
+    }
   }
 }
 
@@ -257,8 +267,7 @@
     &__color,
     &__username,
     &__tel,
-    &__email,
-    &__additionally {
+    &__email {
       position: relative;
       padding-left: 167px;
     }
@@ -350,9 +359,11 @@
     }
 
     &__additionally-wrap {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       padding-bottom: 50px;
+      padding-left: 217px;
       align-items: center;
     }
 
@@ -364,6 +375,10 @@
 
     &__additionally-input {
       margin-bottom: 0;
+    }
+
+    &__additionally-title {
+      left: 50px;
     }
 
     &__btn {

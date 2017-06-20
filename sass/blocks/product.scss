@@ -8,6 +8,7 @@
 
   &__item {
     margin-bottom: 30px;
+    cursor: pointer;
   }
 }
 
@@ -21,7 +22,12 @@
 
     &__item:hover {
       box-shadow: 0 6px 10px rgba(0, 0, 0, .1);
-      transition: .3s;
+      transition: .2s;
+    }
+
+    &__item:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+      transition: .2s;
     }
   }
 }

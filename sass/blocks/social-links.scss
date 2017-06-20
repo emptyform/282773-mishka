@@ -11,6 +11,10 @@
   &__item:hover svg {
     fill: $footer-link-color-hover;
   }
+
+  &__item:active svg {
+    fill: $footer-link-color-active;
+  }
 }
 
 @media (min-width: $tablet) {

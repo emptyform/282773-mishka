@@ -17,9 +17,21 @@
 
 @media (min-width: $tablet) {
   .form-promo {
-    padding: 88px 0;
-    margin-top: -50px;
+    position: relative;
+    padding: 98px 0;
+    margin-top: -45px;
     border-top: 1px solid $promo-top-border;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-position: center;
+    }
 
     &__title {
       font-size: 4.3rem;
@@ -30,8 +42,8 @@
 
 @media (min-width: $desktop) {
   .form-promo {
-    padding: 99px 0;
-    margin-top: -87px;
+    padding: 106px 0;
+    margin-top: -84px;
 
     &__title {
       font-size: 5.3rem;
