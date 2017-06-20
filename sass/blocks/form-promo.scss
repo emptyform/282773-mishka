@@ -5,11 +5,37 @@
 
   &__wrap {
     padding: 0 30px;
+    @include container();
   }
 
   &__title {
     text-align: center;
     font-size: 2.7rem;
     line-height: 1.1;
+  }
+}
+
+@media (min-width: $tablet) {
+  .form-promo {
+    padding: 88px 0;
+    margin-top: -50px;
+    border-top: 1px solid $promo-top-border;
+
+    &__title {
+      font-size: 4.3rem;
+      line-height: 1.16;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .form-promo {
+    padding: 99px 0;
+    margin-top: -87px;
+
+    &__title {
+      font-size: 5.3rem;
+      line-height: 1.07;
+    }
   }
 }

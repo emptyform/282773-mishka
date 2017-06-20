@@ -7,6 +7,10 @@
   &__item:not(:last-child) {
     margin-right: 40px;
   }
+
+  &__item:hover svg {
+    fill: $footer-link-color-hover;
+  }
 }
 
 @media (min-width: $tablet) {
