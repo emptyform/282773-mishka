@@ -1,29 +1,31 @@
 .about {
-  padding-top: 35px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 
   &__wrap {
     padding: 0 30px;
     width: 100%;
-    max-width: 1150px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    @include container();
   }
 
   &__title {
     font-size: 2.5rem;
     line-height: 1.2;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
   }
 
   &__list {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   &__item {
     position: relative;
     padding-top: 55px;
     margin-bottom: 28px;
-    // border: 1px solid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     svg {
       position: absolute;
@@ -42,22 +44,24 @@
 
 @media (min-width: $tablet) {
   .about {
-    padding-top: 55px;
+    padding-top: 75px;
     padding-bottom: 85px;
 
     &__wrap {
       padding: 0 50px;
-      background: url("../../img/review@1x.jpg") no-repeat bottom left;
+      background: url("../img/review@1x.jpg") no-repeat bottom left;
+      background-position-y: 95%
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     &__item {
       width: 50%;
-      margin-bottom: 40px;
+      margin-bottom: 55px;
       padding-right: 40px;
       box-sizing: border-box;
 
@@ -81,6 +85,7 @@
     &__title {
       font-size: 4.3rem;
       line-height: 1.16;
+      margin-bottom: 50px;
     }
 
     &__item-descr {

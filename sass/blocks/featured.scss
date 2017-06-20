@@ -1,23 +1,26 @@
 .featured {
-  padding-top: 34px;
+  padding-top: 30px;
+  padding-bottom: 40px;
 
   &__wrap {
     padding: 0 30px;
     width: 100%;
-    max-width: 1150px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    @include container();
   }
 
   &__title {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__title-item {
     font-size: 2.5rem;
     line-height: 1.2;
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
 
     &:last-child {
       font-size: 1.7rem;
@@ -35,10 +38,17 @@
   }
 
   &__property {
+    width: 100%;
     font-size: 1.5rem;
     line-height: 1.33;
     color: $featured-font-color;
     margin-bottom: 30px;
+  }
+
+  &__property-item td {
+    padding-bottom: 9px;
+    padding-top: 9px;
+    border-bottom: 1px solid $main-nav-border;
   }
 
   &__img {
@@ -49,66 +59,88 @@
     }
   }
 
-  .featured__descr-price-info {
+    &__descr-price-info {
     text-align: center;
   }
 
   &__price {
     display: inline-block;
     font-size: 1.7rem;
-    line-height: 1.17;
+    line-height: 1.4;
     font-weight: bold;
     color: $featured-font-color;
     margin-bottom: 25px;
   }
+
+  &__btn:hover {
+    background-color: $btn;
+    color: $btn-font-color;
+  }
+
+  &__btn:active {
+    color: $btn-color-active;
+  }
 }
 
 @media (min-width: $tablet) {
-  .featured__wrap {
-    padding: 0 50px;
-  }
+  .featured {
+    padding-top: 50px;
 
-  .featured__descr-wrap {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .featured__descr-inner {
-    width: 43.5%;
-    padding-bottom: 100px;
-  }
-
-  .featured__img {
-    width: 50%;
-    margin-bottom: 0;
-  }
-
-  .featured__title {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 55px;
-  }
-  .featured__descr {
-    margin-bottom: 45px;
-  }
-
-  .featured__title-item {
-    font-size: 4.3rem;
-    line-height: 1.17;
-
-    &:last-child {
-      width: 100px;
-      line-height: 1;
+    &__wrap {
+      padding: 0 50px;
     }
-  }
 
-  .featured__descr-price-info {
-    position: absolute;
-    bottom: 0;
-    width: 43.5%;
+    &__descr-wrap {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__descr-inner {
+      width: 43.5%;
+      padding-bottom: 100px;
+    }
+
+    &__img {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    &__descr {
+      margin-bottom: 45px;
+    }
+
+    &__title-item {
+      font-size: 4.3rem;
+      line-height: 1.17;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        width: 100px;
+        line-height: 1;
+      }
+    }
+
+    &__price {
+      margin-bottom: 35px;
+    }
+
+    &__descr-price-info {
+      position: absolute;
+      bottom: 0;
+      width: 43.5%;
+    }
   }
 }
 
@@ -116,51 +148,56 @@
   .featured {
     padding-top: 70px;
     padding-bottom: 95px;
-  }
 
-  .featured__wrap {
-    position: relative;
-  }
 
-  .featured__descr-wrap {
-    padding-left: 175px;
-  }
+    &__wrap {
+      position: relative;
+    }
 
-  .featured__title {
-    position: absolute;
-    top: 60px;
-    left: 100px;
-    z-index: 1;
-  }
+    &__descr-wrap {
+      padding-left: 175px;
+    }
 
-  .featured__descr-inner {
-    width: 33.5%;
-    padding-top: 160px;
-  }
+    &__title {
+      position: absolute;
+      top: 60px;
+      left: 100px;
+      z-index: 1;
+    }
 
-  .featured__descr {
-    font-size: 1.7rem;
-    line-height: 1.76;
-  }
+    &__descr-inner {
+      width: 33.5%;
+      padding-top: 160px;
+    }
 
-  .featured__img {
-    width: 60%;
-  }
+    &__descr {
+      font-size: 1.7rem;
+      line-height: 1.76;
+    }
 
-  .featured__descr-price-info {
-    width: 28%;
-    left: 175px;
-  }
+    &__img {
+      width: 60%;
+    }
 
-  .featured__price {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
+    &__descr-price-info {
+      width: 28%;
+      left: 175px;
+    }
 
-  .featured__title-item:last-child {
-    width: 75px;
-    margin-right: 55px;
-    order: -1;
+    &__price {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    &__title-item {
+      font-size: 5.3rem;
+      line-height: 1.1;
+
+      &:last-child {
+        width: 75px;
+        margin-right: 55px;
+        order: -1;
+      }
+    }
   }
 }
-

@@ -4,15 +4,37 @@
   line-height: 1.1;
   font-weight: bold;
 
-  &__wrap {
-    padding: 0 30px;
-  }
 
   &__descr {
     font-size: 1.3rem;
     line-height: 1.85;
     color: #444;
     margin-bottom: 30px;
+    font-weight: normal;
+  }
+
+  &__descr-wrap,
+  &__type-wrap,
+  &__color-wrap,
+  &__username-wrap,
+  &__telamail-wrap,
+  &__additionally-wrap {
+    padding: 0 30px;
+  }
+
+  &__telamail-wrap svg {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    fill: $form-icon-c;
+  }
+
+  &__additionally-wrap {
+    padding-bottom: 55px;
+  }
+
+  &__additionally {
+    padding-top: 22px;
   }
 
   &__type,
@@ -22,8 +44,36 @@
   &__email,
   &__additionally {
     border-top: 1px solid $form-border-top-color;
+  }
+
+  &__type {
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+
+  &__color {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  &__username {
+    padding-top: 28px;
+    padding-bottom: 30px;
+  }
+
+  &__tel {
+    position: relative;
+    margin-bottom: 33px;
+  }
+
+  &__email,
+  &__tel {
+    position: relative;
     padding-top: 20px;
-    padding-bottom: 20px;
+  }
+
+  &__email {
+    padding-bottom: 33px;
   }
 
   &__type-title,
@@ -32,8 +82,20 @@
   &__tel-title,
   &__email-title,
   &__additionally-title {
-    padding-right: 10px;
-    color: #63d1bb;
+    padding-right: 23px;
+    color: $form-border-top-color;
+    text-transform: uppercase;
+  }
+
+  &__username-text {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  &__username-text,
+  &__type-text,
+  &__color-text {
+    cursor: pointer;
   }
 
   &__username-input,
@@ -42,7 +104,15 @@
     border: 0;
     outline: none;
     border-bottom: 2px solid $form-border-bottom-color;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+
+    &:hover,
+    &:focus,
+    &:hover ~ svg,
+    &:focus ~ svg {
+      border-color: $form-border-top-color;
+      fill: $form-border-top-color;
+    }
   }
 
   &__type-input,
@@ -50,10 +120,42 @@
     display: none;
   }
 
+  &__additionally-input::placeholder,
+  &__username-input::placeholder,
+  &__email-input::placeholder,
+  &__tel-input::placeholder {
+    color: #c7c7c7;
+  }
+
+  &__additionally-input:focus::placeholder,
+  &__username-input:focus::placeholder,
+  &__email-input:focus::placeholder,
+  &__tel-input:focus::placeholder {
+    color: transparent;
+  }
+
   &__type-item,
   &__color-item {
     position: relative;
     padding-left: 60px;
+  }
+
+  &__type-text:hover::before {
+    box-shadow: 0 0 0 3px $form-border-top-color;
+    transition: .2s;
+  }
+
+  &__type-text:active::before {
+    box-shadow: 0 0 0 3px $form-color-border-active;
+  }
+
+  &__color-text:hover::before {
+    border-color: $form-border-top-color;
+    transition: .2s;
+  }
+
+  &__color-text:active::before {
+    border-color: $form-color-border-active;
   }
 
   &__type-text::before {
@@ -87,21 +189,20 @@
   }
 
   &__color-item input[type="checkbox"]:checked ~ .form__color-text::before {
-    background: url("../../img/icon-tick.svg") no-repeat center;
+    background: url("../img/icon-tick.svg") no-repeat center;
   }
 
-  &__type-item {
+  &__type-item:not(:last-child) {
     margin-bottom: 25px;
   }
 
-  &__color-item {
-    margin-bottom: 40px;
+  &__color-item:not(:last-child) {
+    margin-bottom: 44px;
   }
 
-  &__username-item {
-    margin-bottom: 25px;
+  &__username-item:not(:last-child) {
+    margin-bottom: 22px;
   }
-
 
   &__username-input,
   &__tel-input,
@@ -114,6 +215,219 @@
     min-height: 138px;
     border: 2px solid $form-border-bottom-color;
     box-sizing: border-box;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $form-border-top-color;
+    }
   }
 
+  &__required-field {
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 1.14;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: $tablet) {
+  .form {
+    padding-top: 73px;
+
+    &__descr-wrap,
+    &__type-wrap,
+    &__color-wrap,
+    &__username-wrap,
+    &__telamail-wrap,
+    &__additionally-wrap {
+      padding: 0 50px;
+      @include container();
+    }
+
+    &__type,
+    &__color,
+    &__username,
+    &__tel,
+    &__email,
+    &__additionally {
+      position: relative;
+      padding-left: 167px;
+    }
+
+    &__type {
+      padding-bottom: 68px;
+
+      .form__type-item:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__descr {
+      font-size: 1.7rem;
+      line-height: 1.76;
+    }
+
+    &__color-wraper,
+    &__telamail-wraper {
+      background-color: $promo-bg;
+    }
+
+    &__tel-input,
+    &__email-input {
+      background-color: $promo-bg;
+    }
+
+    &__type,
+    &__color,
+    &__username,
+    &__tel,
+    &__email,
+    &__additionally {
+      border-top: none;
+      font-size: 1.9rem;
+      line-height: 1;
+    }
+
+    &__type-title,
+    &__color-title,
+    &__username-title,
+    &__tel-title,
+    &__email-title,
+    &__additionally-title {
+      position: absolute;
+      left: 0;
+    }
+
+    &__color-inner {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form__color-item {
+        width: 50%;
+        box-sizing: border-box;
+        padding-left: 81px;
+        margin-bottom: 60px;
+
+        &:nth-child(n+5) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__color {
+      padding-top: 63px;
+      padding-bottom: 63px;
+    }
+
+    &__color-text::before {
+      width: 54px;
+      height: 52px;
+    }
+
+    &__type-text br {
+      display: none;
+    }
+
+    &__required-field {
+      font-size: 1.7rem;
+      line-height: 1.76;
+      order: 1;
+      margin-bottom: 0;
+      margin-left: auto;
+    }
+
+    &__telamail-wrap svg {
+      top: 19px;
+    }
+
+    &__additionally-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 50px;
+      align-items: center;
+    }
+
+    &__additionally {
+      width: 100%;
+      padding-top: 50px;
+      margin-bottom: 55px;
+    }
+
+    &__additionally-input {
+      margin-bottom: 0;
+    }
+
+    &__btn {
+      width: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .form {
+
+
+    &__color-inner .form__color-item {
+      width: 33.3%;
+
+      &:nth-child(n+4) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__descr {
+      padding-left: 165px;
+      padding-right: 170px;
+    }
+
+    &__color {
+      padding-right: 80px;
+    }
+
+    &__username,
+    &__tel,
+    &__email {
+      padding-right: 175px;
+    }
+
+    &__username-item {
+      display: flex;
+    }
+
+    &__username-text {
+      margin-right: 25px;
+    }
+
+    &__telamail-wrap svg {
+      right: 180px;
+    }
+
+    &__tel {
+      padding-top: 47px;
+
+      svg {
+        top: 45px;
+      }
+    }
+
+    &__email {
+      padding-bottom: 49px;
+    }
+
+    &__additionally-wrap {
+      padding-right: 225px;
+    }
+  }
 }
