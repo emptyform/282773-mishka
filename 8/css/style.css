@@ -676,7 +676,7 @@ fieldset {
       bottom: 0;
       width: 100%;
       height: 34px;
-      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center; }
     .promo__text {
       font-size: 4.3rem;
@@ -801,7 +801,7 @@ fieldset {
         bottom: -75px;
         width: 100%;
         height: 23px;
-        background-image: url("../../img/bg-zigzag-line.svg");
+        background-image: url("../img/bg-zigzag-line.svg");
         background-position: center; }
     .featured__descr-wrap {
       position: relative;
@@ -938,7 +938,7 @@ fieldset {
         bottom: -75px;
         width: 100%;
         height: 23px;
-        background-image: url("../../img/bg-zigzag-line.svg");
+        background-image: url("../img/bg-zigzag-line.svg");
         background-position: center; }
     .about__list {
       display: -ms-flexbox;
@@ -973,7 +973,7 @@ fieldset {
 
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .about__wrap {
-    background-image: url("../../img/review@2x.jpg"); } }
+    background-image: url("../img/review@2x.jpg"); } }
 
 @media (min-width: 1150px) {
   .about {
@@ -1302,7 +1302,7 @@ fieldset {
       bottom: 0;
       width: 100%;
       height: 34px;
-      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center; }
     .catalog-promo__text {
       font-size: 4.1rem;
@@ -1353,61 +1353,55 @@ fieldset {
       .product__item:not(:last-child) {
         margin-right: 10px; } }
 
-.promo-video__wrap {
-  padding: 0 30px;
-  box-sizing: border-box; }
-
-.promo-video__header {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  padding: 22px 32px; }
-  .promo-video__header svg {
-    margin-right: 25px;
-    fill: #63d1bb; }
-
-.promo-video__play {
-  position: relative;
-  margin-bottom: 28px; }
-  .promo-video__play img {
-    width: 100%;
-    display: block; }
-  .promo-video__play svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    transition: .2s; }
-    .promo-video__play svg:hover {
-      transform: translateX(-50%) translateY(-50%) scale(1.2); }
-    .promo-video__play svg:active {
-      transform: translateX(-50%) translateY(-50%) scale(0.8);
-      opacity: .7; }
-
-.promo-video__title {
-  font-size: 1.7rem;
-  line-height: 1.4; }
-
-.promo-video__descr-wrap {
-  padding: 0 33px; }
-
-.promo-video__descr {
-  font-size: 1.3rem;
-  line-height: 1.84;
-  margin-bottom: 25px; }
-
-.promo-video__inner {
-  cursor: pointer;
-  border: 1px solid #ededed;
-  padding-bottom: 32px; }
-
-.promo-video__btn:hover {
-  background-color: #444444;
-  color: white; }
-
-.promo-video__btn:active {
-  color: rgba(255, 255, 255, 0.7); }
+.promo-video {
+  margin-bottom: 60px; }
+  .promo-video__wrap {
+    padding: 0 30px;
+    box-sizing: border-box; }
+  .promo-video__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 22px 32px; }
+    .promo-video__header svg {
+      margin-right: 25px;
+      fill: #63d1bb; }
+  .promo-video__play {
+    position: relative;
+    margin-bottom: 28px; }
+    .promo-video__play img {
+      width: 100%;
+      display: block; }
+    .promo-video__play svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition: .2s; }
+      .promo-video__play svg:hover {
+        transform: translateX(-50%) translateY(-50%) scale(1.2); }
+      .promo-video__play svg:active {
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+        opacity: .7; }
+  .promo-video__title {
+    font-size: 1.7rem;
+    line-height: 1.4; }
+  .promo-video__descr-wrap {
+    padding: 0 33px; }
+  .promo-video__descr {
+    font-size: 1.3rem;
+    line-height: 1.84;
+    margin-bottom: 25px; }
+  .promo-video__inner {
+    cursor: pointer;
+    border: 1px solid #ededed;
+    padding-bottom: 32px; }
+  .promo-video__btn:hover {
+    background-color: #444444;
+    color: white; }
+  .promo-video__btn:active {
+    color: rgba(255, 255, 255, 0.7); }
 
 @media (min-width: 768px) {
   .promo-video__wrap {
@@ -1585,7 +1579,7 @@ fieldset {
       bottom: 0;
       width: 100%;
       height: 34px;
-      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center; }
     .form-promo__title {
       font-size: 4.3rem;
