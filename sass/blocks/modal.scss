@@ -1,0 +1,71 @@
+.modal {
+  position: absolute;
+  top: 1050px;
+  display: none;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  border-top: 1px solid $form-color-border-active;
+  background-color: $bg-color-white;
+  z-index: 10000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+
+  &__wrap {
+    padding: 0 30px;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $btn;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__sizes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__sizes-item {
+    flex-grow: 1;
+    border-color: $main-nav-border;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &--visible {
+    display: block;
+  }
+}
+
+.wrap-visible {
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 5000;
+}
+
+@media (min-width: $tablet) {
+  .modal {
+    width: auto;
+    top: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
