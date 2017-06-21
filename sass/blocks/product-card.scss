@@ -7,6 +7,8 @@
   }
 
   &__price {
+    display: flex;
+    justify-content: space-between;
     padding: 24px 0;
   }
 
@@ -45,6 +47,10 @@
   &__inner {
     padding: 0 27px;
   }
+
+  &__basket svg {
+    fill: $product-card-basket-c;
+  }
 }
 
 @media (min-width: $tablet)  {
@@ -58,11 +64,6 @@
 
     &__img {
       margin-bottom: 0;
-
-      img {
-        height: 334px;
-        object-fit: cover;
-      }
     }
 
     &__inner {
@@ -93,14 +94,5 @@
   .product-card {
     flex-direction: column;
     max-width: 315px;
-
-    &__img {
-
-
-      img {
-        width: 315px;
-        height: 462px;
-      }
-    }
   }
 }

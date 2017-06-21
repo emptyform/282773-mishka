@@ -9,9 +9,21 @@
 
 @media (min-width: $tablet) {
   .catalog-promo {
-    margin-top: -50px;
-    padding: 100px 50px;
+    position: relative;
+    margin-top: -45px;
+    padding: 98px 0;
     border-top: 1px solid $promo-top-border;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: center;
+    }
 
     &__text {
       font-size: 4.1rem;
@@ -22,7 +34,12 @@
 
 @media (min-width: $desktop) {
   .catalog-promo {
-    margin-top: -87px;
-    padding: 115px 50px;
+    margin-top: -84px;
+    padding: 106px 0;
+
+    &__text {
+      font-size: 5.3rem;
+      line-height: 1.1;
+    }
   }
 }

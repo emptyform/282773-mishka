@@ -1,5 +1,5 @@
 .promo-video {
-
+  margin-bottom: 60px;
 
   &__wrap {
     padding: 0 30px;
@@ -13,15 +13,34 @@
 
     svg {
       margin-right: 25px;
+      fill: $promo-item-bg;
     }
   }
 
   &__play {
+    position: relative;
     margin-bottom: 28px;
 
     img {
       width: 100%;
       display: block;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition: .2s;
+
+      &:hover {
+        transform: translateX(-50%) translateY(-50%) scale(1.2);
+      }
+
+      &:active {
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+        opacity: .7;
+      }
     }
   }
 
@@ -41,8 +60,18 @@
   }
 
   &__inner {
+    cursor: pointer;
     border: 1px solid $products-card-border;
     padding-bottom: 32px;
+  }
+
+  &__btn:hover {
+    background-color: $btn;
+    color: $btn-font-color;
+  }
+
+  &__btn:active {
+    color: $btn-color-active;
   }
 }
 
@@ -61,7 +90,12 @@
 
       &:hover {
         box-shadow: 0 6px 10px rgba(0, 0, 0, .1);
-        transition: .3s;
+        transition: .2s;
+      }
+
+      &:active {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+        transition: .2s;
       }
     }
 

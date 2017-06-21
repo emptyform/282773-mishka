@@ -7,6 +7,15 @@
 
   &__logo {
     display: none;
+    cursor: pointer;
+
+    &:hover svg {
+      fill: $footer-link-color-hover;
+    }
+
+    &:active svg {
+      fill: $footer-link-color-active;
+    }
   }
 
   &__copyright-item {
@@ -20,8 +29,21 @@
     text-decoration: none;
     padding: 23px 0;
 
+    &:active {
+      color: $link-color-active;
+    }
+
     svg {
       margin-left: 30px;
+      fill: $user-menu-hover;
+    }
+
+    &:hover svg {
+      fill: $footer-link-color-hover;
+    }
+
+    &:active svg {
+      fill: $footer-link-color-active;
     }
   }
 
@@ -47,6 +69,10 @@
 
     &__copyright-item  {
       padding: 0;
+    }
+
+    &__social-list {
+      border-bottom: 0;
     }
   }
 }
