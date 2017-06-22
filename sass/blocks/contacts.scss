@@ -48,7 +48,7 @@
   &__title {
     font-size: 1.8rem;
     line-height: 1.66;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__map {
@@ -75,8 +75,8 @@
 
 @media (min-width: $tablet) {
   .contacts {
-    padding-top: 30px;
-    padding-bottom: 57px;
+    padding-top: 65px;
+    padding-bottom: 55px;
 
     &__wrap {
       position: relative;
@@ -102,7 +102,7 @@
       flex-wrap: wrap;
       font-size: 1.7rem;
       line-height: 1.76;
-      margin-bottom: 30px;
+      margin-bottom: 55px;
     }
 
     &__descr-top,
@@ -112,11 +112,20 @@
       margin: 0;
     }
 
+    &__bottom-item:nth-child(3),
+    &__bottom-item:nth-child(4) {
+      display: inline-block;
+    }
+
+    &__bottom-item:nth-child(4) {
+      padding-left: 0;
+    }
+
     &__title {
       width: 100%;
       font-size: 4.3rem;
       line-height: 1.16;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
 
     &__wrap-btn {
@@ -146,11 +155,12 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 0 50px;
+
       @include container();
 
       &::before {
         top: 65px;
-        left: 50px;
+        left: 115px;
       }
     }
 
@@ -169,7 +179,7 @@
     }
 
     &__title {
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
 
     &__descr-top,

@@ -9,7 +9,7 @@
   &__header {
     display: flex;
     align-items: center;
-    padding: 22px 32px;
+    padding: 25px 32px;
 
     svg {
       margin-right: 25px;
@@ -19,7 +19,7 @@
 
   &__play {
     position: relative;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 
     img {
       width: 100%;
@@ -31,7 +31,7 @@
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      transition: .2s;
+      transition: 0.2s;
 
       &:hover {
         transform: translateX(-50%) translateY(-50%) scale(1.2);
@@ -39,7 +39,7 @@
 
       &:active {
         transform: translateX(-50%) translateY(-50%) scale(0.8);
-        opacity: .7;
+        opacity: 0.7;
       }
     }
   }
@@ -62,7 +62,7 @@
   &__inner {
     cursor: pointer;
     border: 1px solid $products-card-border;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
   }
 
   &__btn:hover {
@@ -75,63 +75,64 @@
   }
 }
 
-@media (min-width: $tablet)  {
+@media (min-width: $tablet) {
   .promo-video {
+    padding-bottom: 65px;
+    margin-bottom: 0;
+  }
 
+  .promo-video__wrap {
+    padding: 0 50px;
+  }
 
-    &__wrap {
-      padding: 0 50px;
+  .promo-video__inner {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 45px;
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.2s;
     }
 
-    &__inner {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 45px;
-
-      &:hover {
-        box-shadow: 0 6px 10px rgba(0, 0, 0, .1);
-        transition: .2s;
-      }
-
-      &:active {
-        box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-        transition: .2s;
-      }
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      transition: 0.2s;
     }
+  }
 
-    &__header {
-      padding-top: 31px;
-      padding-bottom: 31px;
-      padding-left: 42px;
-      padding-right: 42px;
+  .promo-video__header {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .promo-video__title {
+    font-size: 2rem;
+    line-height: 1.2;
+
+    br {
+      display: none;
     }
+  }
 
-    &__title {
-      font-size: 2rem;
-      line-height: 1.2;
+  .promo-video__descr-wrap {
+    padding: 0 42px;
+  }
 
-      br {
-        display: none;
-      }
-    }
+  .promo-video__descr {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-bottom: 35px;
+  }
 
-    &__descr-wrap {
-      padding: 0 42px;
-    }
+  .promo-video__play {
+    order: -1;
+    margin-bottom: 0;
 
-    &__descr {
-      font-size: 1.5rem;
-      line-height: 2;
-      margin-bottom: 35px;
-    }
-
-    &__play {
-      order: -1;
-      margin-bottom: 0;
-
-      img {
-        min-height: 455px;
-      }
+    img {
+      min-height: 455px;
     }
   }
 }
@@ -139,6 +140,7 @@
 @media (min-width: $desktop) {
   .promo-video {
     margin-bottom: 105px;
+    padding-bottom: 0;
 
     &__wrap {
       max-width: 1150px;
@@ -159,7 +161,7 @@
     &__header {
       position: absolute;
       top: 45px;
-      right: 85px;
+      right: 75px;
       width: 210px;
       padding: 0;
       flex-direction: column;
@@ -176,7 +178,7 @@
 
     &__descr-wrap {
       width: 35%;
-      padding-left: 78px;
+      padding-left: 80px;
       padding-right: 58px;
       padding-bottom: 60px;
       padding-top: 175px;

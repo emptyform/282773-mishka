@@ -3,7 +3,13 @@
   background-color: $promo-bg;
 
   &__text {
+    font-size: 2.7rem;
+    line-height: 1.1;
     text-align: center;
+  }
+
+  &__info {
+    display: none;
   }
 }
 
@@ -25,6 +31,16 @@
       background-position: center;
     }
 
+    &__info {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: $btn;
+    }
+
     &__text {
       font-size: 4.1rem;
       line-height: 1.2;
@@ -34,8 +50,18 @@
 
 @media (min-width: $desktop) {
   .catalog-promo {
-    margin-top: -84px;
+    margin-top: -74px;
     padding: 106px 0;
+
+    &__wrap {
+      position: relative;
+
+      @include container();
+    }
+
+    &__info {
+      top: -80px;
+    }
 
     &__text {
       font-size: 5.3rem;

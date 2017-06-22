@@ -53,26 +53,23 @@
 }
 
 @media (min-width: $tablet) {
-  .page-footer {
+  .page-footer__wrap {
+    padding: 53px 50px;
+    display: flex;
+    justify-content: space-between;
 
-    &__wrap {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 53px 50px;
-      display: flex;
-      justify-content: space-between;
-    }
+    @include container();
+  }
 
-    &__logo {
-      display: block;
-    }
+  .page-footer__logo {
+    display: block;
+  }
 
-    &__copyright-item  {
-      padding: 0;
-    }
+  .page-footer__copyright-item {
+    padding: 0;
+  }
 
-    &__social-list {
-      border-bottom: 0;
-    }
+  .page-footer__social-list {
+    border-bottom: 0;
   }
 }

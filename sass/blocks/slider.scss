@@ -2,10 +2,10 @@
   position: relative;
 
   &__viewport {
-      width: 100%;
-      display: block;
-      overflow: hidden;
-      user-select: none;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    user-select: none;
   }
 
   &__list {
@@ -17,9 +17,9 @@
     left: 0;
     margin: 0;
     padding: 0;
-    transition: .5s;
+    transition: 0.5s;
     transition-timing-function: ease-in-out;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   &__title {
@@ -29,14 +29,15 @@
   }
 
   &__item {
-      width: calc(100%/3);
+    width: calc(100%/3);
   }
 
   &__btns {
     display: flex;
     box-sizing: border-box;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
+
   &__btn {
     display: inline-block;
     cursor: pointer;
@@ -46,11 +47,11 @@
     border: 1px solid $main-nav-border;
 
     img:hover {
-      opacity: .6;
+      opacity: 0.6;
     }
 
     img:active {
-      opacity: .3;
+      opacity: 0.3;
     }
   }
 
@@ -78,7 +79,6 @@
     margin-bottom: 5px;
   }
 
-
   &__author-instg {
     display: block;
     font-size: 1.7rem;
@@ -86,7 +86,7 @@
   }
 }
 
-@media (min-width: $tablet)  {
+@media (min-width: $tablet) {
   .slider {
     padding-top: 90px;
     padding-bottom: 40px;
@@ -113,24 +113,21 @@
     padding-right: 38px;
   }
 
-  .slider__author-instg {
-    margin-bottom: 45px;
-  }
-
   .slider__title {
     font-size: 4.3rem;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .slider__descr {
     font-size: 1.7rem;
     line-height: 1.8;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .slider__author {
     font-size: 1.8rem;
     line-height: 1.33;
+    margin-bottom: 0;
   }
 
   .slider__author-instg {
@@ -141,5 +138,19 @@
 @media (min-width: $desktop) {
   .slider {
     padding-left: 175px;
+    padding-top: 80px;
+    padding-bottom: 110px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__descr {
+      margin-bottom: 40px;
+    }
+
+    &__btns {
+      bottom: 140px;
+    }
   }
 }

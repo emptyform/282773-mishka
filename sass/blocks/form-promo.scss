@@ -1,11 +1,17 @@
 .form-promo {
-  padding-top: 76px;
-  padding-bottom: 80px;
+  padding-top: 70px;
+  padding-bottom: 75px;
   background-color: $promo-bg;
 
   &__wrap {
+    position: relative;
     padding: 0 30px;
+
     @include container();
+  }
+
+  &__info {
+    display: none;
   }
 
   &__title {
@@ -33,6 +39,16 @@
       background-position: center;
     }
 
+    &__info {
+      position: absolute;
+      top: -85px;
+      right: 50px;
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: $btn;
+    }
+
     &__title {
       font-size: 4.3rem;
       line-height: 1.16;
@@ -43,7 +59,7 @@
 @media (min-width: $desktop) {
   .form-promo {
     padding: 106px 0;
-    margin-top: -84px;
+    margin-top: -74px;
 
     &__title {
       font-size: 5.3rem;

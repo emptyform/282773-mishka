@@ -1,5 +1,5 @@
 .promo {
-  background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat center 0;
+  background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat center -20px;
   padding-top: 75px;
 
   &__text {
@@ -44,7 +44,7 @@
     margin-top: -45px;
     padding-top: 160px;
     background-image: url("../img/hero-desktop@1x.jpg");
-    background-size: cover;
+    background-position-y: -30px;
 
     &::after {
       content: "";
@@ -58,9 +58,10 @@
     }
 
     &__text {
+      width: 100%;
       font-size: 4.3rem;
       line-height: 1.16;
-      margin-bottom: 395px;
+      margin-bottom: 370px;
     }
 
     &__wrap {
@@ -69,6 +70,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 0 50px;
+
       @include container();
     }
 
@@ -76,11 +78,13 @@
       width: 50%;
       box-sizing: border-box;
       text-decoration: none;
-      padding: 39px 35px;
+      padding: 50px 35px;
+      padding-top: 30px;
+      align-self: flex-start;
 
       &:hover {
         transform: translateY(-10px);
-        transition: .2s;
+        transition: 0.2s;
       }
     }
 
@@ -97,30 +101,30 @@
       line-height: 1.6;
       color: $btn;
     }
-
-    &__text {
-      width: 100%;
-    }
-
   }
 }
 
 @media (min-width: $desktop) {
   .promo {
-    margin-top: -84px;
+    margin-top: -74px;
+    background-position-y: 0;
 
     &__text {
       font-size: 5.3rem;
       line-height: 1.1;
-      margin-bottom: 380px;
+      margin-bottom: 350px;
+    }
+
+    &__item {
+      padding-bottom: 45px;
     }
   }
 }
 
 @media (min-width: 768px) and (min-resolution: 144dpi),
   (min-width: 768px) and (min-resolution: 1.5dppx) {
-    .promo {
-      background-image: url("../img/hero-desktop@2x.jpg");
-      background-size: 1200px auto;
-    }
+  .promo {
+    background-image: url("../img/hero-desktop@2x.jpg");
+    background-size: 1200px auto;
+  }
 }
