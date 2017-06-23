@@ -121,6 +121,10 @@
       padding-left: 0;
     }
 
+    &__bottom-item:nth-child(2) {
+      margin-right: 100px;
+    }
+
     &__title {
       width: 100%;
       font-size: 4.3rem;
@@ -184,8 +188,12 @@
 
     &__descr-top,
     &__descr-bottom {
-      flex-basis: 0;
+      flex-basis: auto;
       flex-grow: 0;
+    }
+
+    &__bottom-item:nth-child(2) {
+      margin-right: 0;
     }
 
     &__descr-top {
