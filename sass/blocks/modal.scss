@@ -8,7 +8,7 @@
   border-top: 1px solid $form-color-border-active;
   background-color: $bg-color-white;
   z-index: 10000;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 
   &__wrap {
     padding: 0 30px;
@@ -49,16 +49,6 @@
   &--visible {
     display: block;
   }
-}
-
-.wrap-visible {
-  opacity: 0.9;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  width: 100%;
-  z-index: 5000;
 }
 
 @media (min-width: $tablet) {

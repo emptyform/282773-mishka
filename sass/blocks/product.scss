@@ -9,33 +9,39 @@
   &__item {
     margin-bottom: 30px;
     cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media (min-width: $tablet) {
-  .product {
+  .product__wrap {
+    padding: 0 50px;
+  }
 
+  .product__item {
+    margin-bottom: 55px;
+  }
 
-    &__wrap {
-      padding: 0 50px;
-    }
+  .product__item:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+  }
 
-    &__item:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, .1);
-      transition: .2s;
-    }
-
-    &__item:active {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-      transition: .2s;
-    }
+  .product__item:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
   }
 }
 
 @media (min-width: $desktop) {
   .product {
-    margin-bottom: 57px;
-    padding-top: 130px;
+    margin-bottom: 37px;
+    padding-top: 110px;
 
     &__wrap {
       max-width: 1150px;
@@ -45,14 +51,18 @@
 
     &__list {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     &__item {
-      margin-bottom: 0;
+      margin-bottom: 20px;
 
-      &:not(:last-child) {
-        margin-right: 10px;
+      &:last-child {
+        margin-bottom: 20px;
+      }
+
+      &:not(:nth-child(3n+3)) {
+        margin-right: 48px;
       }
     }
   }

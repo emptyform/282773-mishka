@@ -1,5 +1,5 @@
 .form {
-  padding-top: 29px;
+  padding-top: 25px;
   font-size: 1.7rem;
   line-height: 1.1;
   font-weight: bold;
@@ -9,7 +9,7 @@
     font-size: 1.3rem;
     line-height: 1.85;
     color: #444;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-weight: normal;
   }
 
@@ -24,17 +24,18 @@
 
   &__telamail-wrap svg {
     position: absolute;
-    top: 32px;
+    top: 15px;
     right: 0;
     fill: $form-icon-c;
   }
 
   &__additionally-wrap {
+    position: relative;
     padding-bottom: 55px;
   }
 
   &__additionally {
-    padding-top: 22px;
+    padding-top: 30px;
   }
 
   &__type,
@@ -69,7 +70,7 @@
   &__email,
   &__tel {
     position: relative;
-    padding-top: 20px;
+    padding-top: 35px;
   }
 
   &__email {
@@ -85,6 +86,15 @@
     padding-right: 23px;
     color: $form-border-top-color;
     text-transform: uppercase;
+  }
+
+  &__tel-title,
+  &__email-title,
+  &__additionally-title {
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    cursor: pointer;
   }
 
   &__username-text {
@@ -141,17 +151,17 @@
   }
 
   &__type-text:hover::before {
-    box-shadow: 0 0 0 3px $form-border-top-color;
-    transition: .2s;
+    box-shadow: 0 0 0 2px $form-border-top-color;
+    transition: 0.2s;
   }
 
   &__type-text:active::before {
-    box-shadow: 0 0 0 3px $form-color-border-active;
+    box-shadow: 0 0 0 2px $form-color-border-active;
   }
 
   &__color-text:hover::before {
     border-color: $form-border-top-color;
-    transition: .2s;
+    transition: 0.2s;
   }
 
   &__color-text:active::before {
@@ -165,7 +175,7 @@
     width: 16px;
     border-radius: 50%;
     border: 9px solid #fff;
-    box-shadow: 0 0 0 3px;
+    box-shadow: 0 0 0 2px;
     position: absolute;
     left: 0;
     top: 50%;
@@ -184,11 +194,11 @@
     border: 2px solid $form-border-bottom-color;
   }
 
-  &__type-item input[type="radio"]:checked ~ .form__type-text::before {
+  &__type-input:checked ~ .form__type-text::before {
     background-color: #62d1ba;
   }
 
-  &__color-item input[type="checkbox"]:checked ~ .form__color-text::before {
+  &__color-input:checked ~ .form__color-text::before {
     background: url("../img/icon-tick.svg") no-repeat center;
   }
 
@@ -251,7 +261,7 @@
 
 @media (min-width: $tablet) {
   .form {
-    padding-top: 73px;
+    padding-top: 50px;
 
     &__descr-wrap,
     &__type-wrap,
@@ -260,6 +270,7 @@
     &__telamail-wrap,
     &__additionally-wrap {
       padding: 0 50px;
+
       @include container();
     }
 
@@ -273,14 +284,15 @@
     }
 
     &__type {
-      padding-bottom: 68px;
+      padding-bottom: 65px;
 
       .form__type-item:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
       }
     }
 
     &__descr {
+      margin-bottom: 40px;
       font-size: 1.7rem;
       line-height: 1.76;
     }
@@ -316,6 +328,13 @@
       left: 0;
     }
 
+    &__tel-title,
+    &__email-title,
+    &__additionally-title {
+      top: inherit;
+      background-color: transparent;
+    }
+
     &__color-inner {
       display: flex;
       flex-wrap: wrap;
@@ -333,13 +352,35 @@
     }
 
     &__color {
-      padding-top: 63px;
-      padding-bottom: 63px;
+      padding-top: 65px;
+      padding-bottom: 65px;
     }
 
     &__color-text::before {
       width: 54px;
       height: 52px;
+      box-sizing: border-box;
+    }
+
+    &__username {
+      padding-top: 65px;
+      padding-bottom: 50px;
+    }
+
+    &__username-item {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__username-input {
+      padding-bottom: 13px;
+    }
+
+    &__username-text {
+      margin-right: 25px;
     }
 
     &__type-text br {
@@ -354,8 +395,22 @@
       margin-left: auto;
     }
 
-    &__telamail-wrap svg {
-      top: 19px;
+    &__tel {
+      padding-top: 60px;
+      margin-bottom: 40px;
+
+      svg {
+        top: 60px;
+      }
+    }
+
+    &__email {
+      padding-top: 0;
+      padding-bottom: 50px;
+
+      svg {
+        top: -5px;
+      }
     }
 
     &__additionally-wrap {
@@ -363,13 +418,13 @@
       display: flex;
       flex-wrap: wrap;
       padding-bottom: 50px;
-      padding-left: 217px;
       align-items: center;
     }
 
     &__additionally {
       width: 100%;
       padding-top: 50px;
+      padding-left: 167px;
       margin-bottom: 55px;
     }
 
@@ -392,7 +447,7 @@
 
 @media (min-width: $desktop) {
   .form {
-
+    padding-top: 105px;
 
     &__color-inner .form__color-item {
       width: 33.3%;
@@ -402,9 +457,14 @@
       }
     }
 
+    &__type {
+      padding-top: 0;
+    }
+
     &__descr {
       padding-left: 165px;
       padding-right: 170px;
+      margin-bottom: 70px;
     }
 
     &__color {
@@ -430,19 +490,25 @@
     }
 
     &__tel {
-      padding-top: 47px;
+      padding-top: 60px;
 
       svg {
-        top: 45px;
+        top: 60px;
       }
     }
 
     &__email {
-      padding-bottom: 49px;
+      padding-bottom: 50px;
+    }
+
+    &__additionally {
+      padding-left: 0;
+      margin-bottom: 50px;
     }
 
     &__additionally-wrap {
       padding-right: 225px;
+      padding-left: 215px;
     }
   }
 }
