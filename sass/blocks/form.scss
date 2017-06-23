@@ -151,12 +151,12 @@
   }
 
   &__type-text:hover::before {
-    box-shadow: 0 0 0 3px $form-border-top-color;
+    box-shadow: 0 0 0 2px $form-border-top-color;
     transition: 0.2s;
   }
 
   &__type-text:active::before {
-    box-shadow: 0 0 0 3px $form-color-border-active;
+    box-shadow: 0 0 0 2px $form-color-border-active;
   }
 
   &__color-text:hover::before {
@@ -175,7 +175,7 @@
     width: 16px;
     border-radius: 50%;
     border: 9px solid #fff;
-    box-shadow: 0 0 0 3px;
+    box-shadow: 0 0 0 2px;
     position: absolute;
     left: 0;
     top: 50%;
