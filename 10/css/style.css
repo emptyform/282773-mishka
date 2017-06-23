@@ -1070,10 +1070,10 @@ label {
     position: relative;
     padding-left: 60px; }
   .form__type-text:hover::before {
-    box-shadow: 0 0 0 3px #62d1ba;
+    box-shadow: 0 0 0 2px #62d1ba;
     transition: 0.2s; }
   .form__type-text:active::before {
-    box-shadow: 0 0 0 3px #c7c7c7; }
+    box-shadow: 0 0 0 2px #c7c7c7; }
   .form__color-text:hover::before {
     border-color: #62d1ba;
     transition: 0.2s; }
@@ -1086,7 +1086,7 @@ label {
     width: 16px;
     border-radius: 50%;
     border: 9px solid #fff;
-    box-shadow: 0 0 0 3px;
+    box-shadow: 0 0 0 2px;
     position: absolute;
     left: 0;
     top: 50%;
