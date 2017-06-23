@@ -112,6 +112,10 @@
       margin: 0;
     }
 
+    &__bottom-item:first-child {
+      margin-right: 20px;
+    }
+
     &__bottom-item:nth-child(3),
     &__bottom-item:nth-child(4) {
       display: inline-block;
@@ -122,7 +126,7 @@
     }
 
     &__bottom-item:nth-child(2) {
-      margin-right: 100px;
+      margin-right: 98px;
     }
 
     &__title {

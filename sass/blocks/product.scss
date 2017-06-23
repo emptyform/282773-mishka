@@ -9,6 +9,8 @@
   &__item {
     margin-bottom: 30px;
     cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 
     &:last-child {
       margin-bottom: 0;

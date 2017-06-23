@@ -8,6 +8,10 @@
     @include reset();
   }
 
+  &__dropdown {
+    z-index: 10;
+  }
+
   &__list a,
   &__user-list a {
     display: block;

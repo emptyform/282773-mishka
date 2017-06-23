@@ -63,6 +63,8 @@
     cursor: pointer;
     border: 1px solid $products-card-border;
     padding-bottom: 30px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   &__btn:hover {

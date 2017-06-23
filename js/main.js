@@ -113,21 +113,17 @@
 /* --------------------------------------------------------------------------
                               GOOGLE MAPS API
 -----------------------------------------------------------------------------*/
-var image = {
-    url: 'img/icon-map-pin.svg',
-    scaledSize: new google.maps.Size(100, 100),
-};
+var image = 'img/icon-map-pin.svg';
 
-function initMap() {
+function initMap()
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 59.938631, lng: 30.323055}, // Координаты
-        zoom: 17
+        zoom: 18
     });
 
     var beachMarker = new google.maps.Marker({
         position: {lat: 59.938631, lng: 30.323055},
         map: map,
-        optimized: false,
         title: 'интернет-магазин Мишка',
         icon: image
     });
