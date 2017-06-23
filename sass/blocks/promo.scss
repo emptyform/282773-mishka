@@ -18,6 +18,10 @@
     background-color: $promo-item-bg;
     text-decoration: none;
 
+    svg {
+      fill-opacity: 0.3;
+    }
+
     &--bg {
       background-color: #56c3b2;
     }
@@ -85,6 +89,14 @@
       &:hover {
         transform: translateY(-10px);
         transition: 0.2s;
+
+        svg {
+          fill-opacity: 0.5;
+        }
+      }
+
+      &:active svg {
+        fill-opacity: 0.2;
       }
     }
 
