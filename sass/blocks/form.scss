@@ -24,7 +24,6 @@
 
   &__telamail-wrap svg {
     position: absolute;
-    top: 15px;
     right: 0;
     fill: $form-icon-c;
   }
@@ -65,6 +64,10 @@
   &__tel {
     position: relative;
     margin-bottom: 33px;
+
+    svg {
+      top: 35px;
+    }
   }
 
   &__email,
@@ -75,6 +78,10 @@
 
   &__email {
     padding-bottom: 33px;
+
+    svg {
+      top: 30px;
+    }
   }
 
   &__type-title,
