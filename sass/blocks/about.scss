@@ -35,6 +35,7 @@
     position: relative;
     padding-top: 55px;
     margin-bottom: 28px;
+    margin-right: 10px;
 
     &:last-child {
       margin-bottom: 0;
@@ -69,7 +70,7 @@
       background-size: 350px auto;
 
       &::after {
-        botttom: -60px;
+        bottom: -60px;
       }
     }
 
