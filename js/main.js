@@ -57,9 +57,9 @@
     }
 
     if (basket && wrapper) {
-        basket.forEach(function(item) {
-            item.addEventListener('click', showModal, false);
-        });
+        for (var i = 0; i < basket.length; i++) {
+            basket[i].addEventListener('click', showModal, false);
+        }
         wrapper.addEventListener('click', hideModal, false);
     }
 
@@ -135,5 +135,7 @@ function initMap() {
         map: map,
         optimized: false
     });
+
+    console.log(this);
 }
 

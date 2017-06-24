@@ -20,7 +20,7 @@
     background-color: $promo-item-bg;
     text-decoration: none;
 
-    &:first-child svg {
+    &:first-of-type svg {
       margin-right: 10px;
     }
 
