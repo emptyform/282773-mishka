@@ -14,6 +14,15 @@
     padding: 0 30px;
   }
 
+  &__btn:hover {
+    background-color: $btn;
+    color: $btn-font-color;
+  }
+
+  &__btn:active {
+    color: $btn-color-active;
+  }
+
   &__title {
     font-size: 2.5rem;
     line-height: 1.2;
@@ -39,10 +48,19 @@
 
   &__sizes-item {
     flex-grow: 1;
+    cursor: pointer;
     border-color: $main-nav-border;
 
     &:not(:last-child) {
       margin-right: 5px;
+    }
+
+    &:hover {
+      border-color: $modal-btn-hover;
+    }
+
+    &:active {
+      border-color: $modal-btn-active;
     }
   }
 
