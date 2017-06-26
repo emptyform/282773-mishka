@@ -3,18 +3,18 @@
   justify-content: center;
   align-items: center;
   padding: 24px 0;
+}
 
-  &__item:not(:last-child) {
-    margin-right: 40px;
-  }
+.social-links__item:not(:last-child) {
+  margin-right: 40px;
+}
 
-  &__item:hover svg {
-    fill: $footer-link-color-hover;
-  }
+.social-links__item:hover svg {
+  fill: $footer-link-color-hover;
+}
 
-  &__item:active svg {
-    fill: $footer-link-color-active;
-  }
+.social-links__item:active svg {
+  fill: $footer-link-color-active;
 }
 
 @media (min-width: $tablet) {

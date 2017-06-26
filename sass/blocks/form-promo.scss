@@ -2,23 +2,23 @@
   padding-top: 70px;
   padding-bottom: 75px;
   background-color: $promo-bg;
+}
 
-  &__wrap {
-    position: relative;
-    padding: 0 30px;
+.form-promo__wrap {
+  position: relative;
+  padding: 0 30px;
 
-    @include container();
-  }
+  @include container();
+}
 
-  &__info {
-    display: none;
-  }
+.form-promo__info {
+  display: none;
+}
 
-  &__title {
-    text-align: center;
-    font-size: 2.7rem;
-    line-height: 1.1;
-  }
+.form-promo__title {
+  text-align: center;
+  font-size: 2.7rem;
+  line-height: 1.1;
 }
 
 @media (min-width: $tablet) {
@@ -38,21 +38,21 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center;
     }
+  }
 
-    &__info {
-      position: absolute;
-      top: -85px;
-      right: 50px;
-      display: block;
-      font-size: 1.5rem;
-      line-height: 1.6;
-      color: $btn;
-    }
+  .form-promo__info {
+    position: absolute;
+    top: -85px;
+    right: 50px;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: $btn;
+  }
 
-    &__title {
-      font-size: 4.3rem;
-      line-height: 1.16;
-    }
+  .form-promo__title {
+    font-size: 4.3rem;
+    line-height: 1.16;
   }
 }
 
@@ -60,10 +60,10 @@
   .form-promo {
     padding: 106px 0;
     margin-top: -74px;
+  }
 
-    &__title {
-      font-size: 5.3rem;
-      line-height: 1.07;
-    }
+  .form-promo__title {
+    font-size: 5.3rem;
+    line-height: 1.07;
   }
 }

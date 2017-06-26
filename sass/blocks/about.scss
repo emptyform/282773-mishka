@@ -1,117 +1,116 @@
 .about {
   padding-top: 30px;
   padding-bottom: 50px;
+}
 
-  &__wrap {
-    position: relative;
-    padding: 0 30px;
+.about__wrap {
+  position: relative;
+  padding: 0 30px;
+  width: 100%;
+
+  @include container();
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
     width: 100%;
-
-    @include container();
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: -50px;
-      width: 100%;
-      height: 23px;
-      background: transparent url("../img/bg-zigzag-line.svg") no-repeat center;
-    }
-  }
-
-  &__title {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 30px;
-  }
-
-  &__list {
-    margin-bottom: 55px;
-  }
-
-  &__item {
-    position: relative;
-    padding-top: 55px;
-    margin-bottom: 28px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      fill: $promo-item-bg;
-    }
-  }
-
-  &__item-descr {
-    font-size: 1.7rem;
-    line-height: 1.18;
-    font-weight: bold;
+    height: 23px;
+    background: transparent url("../img/bg-zigzag-line.svg") no-repeat center;
   }
 }
 
+.about__title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.about__list {
+  margin-bottom: 55px;
+}
+
+.about__item {
+  position: relative;
+  padding-top: 55px;
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: $promo-item-bg;
+  }
+}
+
+.about__item-descr {
+  font-size: 1.7rem;
+  line-height: 1.18;
+  font-weight: bold;
+}
 
 @media (min-width: $tablet) {
   .about {
     padding-top: 55px;
     padding-bottom: 60px;
+  }
 
-    &__wrap {
-      position: relative;
-      padding: 0 50px;
-      background: transparent url("../img/review@1x.jpg") no-repeat bottom left;
-      background-position-y: 95%;
-      background-size: 350px auto;
+  .about__wrap {
+    position: relative;
+    padding: 0 50px;
+    background: transparent url("../img/review@1x.jpg") no-repeat bottom left;
+    background-position-y: 95%;
+    background-size: 350px auto;
 
-      &::after {
-        bottom: -60px;
-      }
+    &::after {
+      bottom: -60px;
+    }
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .about__item {
+    width: 50%;
+    margin-bottom: 55px;
+    padding-right: 40px;
+    box-sizing: border-box;
+
+    &:first-child {
+      order: -10;
     }
 
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+    &:nth-child(2) {
+      order: -8;
     }
 
-    &__item {
-      width: 50%;
-      margin-bottom: 55px;
-      padding-right: 40px;
-      box-sizing: border-box;
-
-      &:first-child {
-        order: -10;
-      }
-
-      &:nth-child(2) {
-        order: -8;
-      }
-
-      &:nth-child(4) {
-        order: -9;
-      }
-
-      &:nth-child(5) {
-        order: -7;
-      }
+    &:nth-child(4) {
+      order: -9;
     }
 
-    &__title {
-      font-size: 4.3rem;
-      line-height: 1.16;
-      margin-bottom: 45px;
+    &:nth-child(5) {
+      order: -7;
     }
+  }
 
-    &__item-descr {
-      font-size: 2rem;
-      line-height: 1.1;
-    }
+  .about__title {
+    font-size: 4.3rem;
+    line-height: 1.16;
+    margin-bottom: 45px;
+  }
+
+  .about__item-descr {
+    font-size: 2rem;
+    line-height: 1.1;
   }
 }
 
@@ -126,29 +125,29 @@
   .about {
     padding-top: 65px;
     padding-bottom: 55px;
+  }
 
-    &__wrap {
-      background-position-x: 50px;
+  .about__wrap {
+    background-position-x: 50px;
 
-      &::after {
-        bottom: -55px;
-      }
+    &::after {
+      bottom: -55px;
     }
+  }
 
-    &__title {
-      font-size: 5.3rem;
-      line-height: 1.08;
-      margin-bottom: 45px;
-      padding-left: 175px;
-    }
+  .about__title {
+    font-size: 5.3rem;
+    line-height: 1.08;
+    margin-bottom: 45px;
+    padding-left: 175px;
+  }
 
-    &__list {
-      padding-left: 175px;
-      margin-bottom: 30px;
-    }
+  .about__list {
+    padding-left: 175px;
+    margin-bottom: 30px;
+  }
 
-    &__item {
-      padding-right: 145px;
-    }
+  .about__item {
+    padding-right: 145px;
   }
 }
