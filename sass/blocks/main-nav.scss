@@ -2,97 +2,142 @@
   position: relative;
   display: flex;
   flex-direction: column;
+}
 
-  &__list,
-  &__user-list {
-    @include reset();
+.main-nav__list,
+.main-nav__user-list {
+  @include reset();
+}
+
+.main-nav__dropdown {
+  z-index: 10;
+}
+
+.main-nav__list a,
+.main-nav__user-list a {
+  display: block;
+  line-height: 1.4;
+  padding: 28px 30px;
+  text-align: center;
+  color: $link-font-color;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-bottom: 1px solid $promo-top-border;
+
+  &:hover {
+    color: $link-color-hover;
   }
 
-  &__dropdown {
-    z-index: 10;
+  &:active {
+    color: $link-color-active;
   }
+}
 
-  &__list a,
-  &__user-list a {
-    display: block;
-    line-height: 1.4;
-    padding: 28px 30px;
-    text-align: center;
-    color: $link-font-color;
-    text-decoration: none;
-    font-size: 1.7rem;
-    font-weight: bold;
-    border-bottom: 1px solid $promo-top-border;
+.main-nav__user-link svg {
+  fill: $product-card-basket-c;
+}
 
-    &:hover {
-      color: $link-color-hover;
-    }
+.main-nav__user-link:hover svg {
+  fill: $user-menu-hover;
+}
 
-    &:active {
-      color: $link-color-active;
-    }
-  }
+.main-nav__user-link:active svg {
+  fill: $user-menu-active;
+}
 
-  &__user-link svg {
-    fill: $product-card-basket-c;
-  }
+.main-nav__item:nth-child(n+3) {
+  display: none;
+}
 
-  &__user-link:hover svg {
-    fill: $user-menu-hover;
-  }
+.main-nav__toggle {
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  background-color: #fff;
+  border: none;
+  display: block;
+  width: 30px;
+  height: 25px;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+}
 
-  &__user-link:active svg {
-    fill: $user-menu-active;
-  }
+  //&--closed  .main-nav__toggle::before {
+  //  content: "";
+  //  display: block;
+  //  width: 100%;
+  //  height: 2px;
+  //  background-color: #000;
+  //  box-shadow: 0 4px 0 #000,
+  //    0 -4px 0 #000;
+  //}
+  //
+  //&--opened .main-nav__toggle::before,
+  //&--opened .main-nav__toggle::after {
+  //  content: "";
+  //  position: absolute;
+  //  top: 9px;
+  //  left: -3px;
+  //  display: block;
+  //  width: 27px;
+  //  height: 2px;
+  //  background-color: #000;
+  //}
+  //
+  //&--opened .main-nav__toggle::before {
+  //  transform: rotate(45deg);
+  //}
+  //
+  //&--opened .main-nav__toggle::after {
+  //  transform: rotate(-45deg);
+  //}
 
-  &__item:nth-child(n+3) {
-    display: none;
-  }
+.main-nav__toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: $link-font-color;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
 
-  &__toggle {
-    position: absolute;
-    top: -50px;
-    right: 30px;
-    background-color: #fff;
-    border: none;
-    display: block;
-    width: 21px;
-    height: 20px;
-    padding: 0;
-    font-size: 0;
-    cursor: pointer;
-  }
+.main-nav__toggle span:nth-child(1) {
+  top: 0;
+  transform-origin: left center;
+}
 
-  &--closed  .main-nav__toggle::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    box-shadow: 0 4px 0 #000,
-      0 -4px 0 #000;
-  }
+.main-nav__toggle span:nth-child(2) {
+  top: 10px;
+  transform-origin: left center;
+}
 
-  &--opened .main-nav__toggle::before,
-  &--opened .main-nav__toggle::after {
-    content: "";
-    position: absolute;
-    top: 9px;
-    left: -3px;
-    display: block;
-    width: 27px;
-    height: 2px;
-    background-color: #000;
-  }
+.main-nav__toggle span:nth-child(3) {
+  top: 21px;
+  transform-origin: left center;
+}
 
-  &--opened .main-nav__toggle::before {
-    transform: rotate(45deg);
-  }
+.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0;
+  left: 4px;
+}
 
-  &--opened .main-nav__toggle::after {
-    transform: rotate(-45deg);
-  }
+.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
 
+.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 4px;
 }
 
 @media (max-width: $mobile-only) {
@@ -105,7 +150,7 @@
     display: none;
   }
 
-  .main-nav--opened .main-nav__dropdown {  // в открытом состоянии
+  .open + .main-nav__dropdown {  // в открытом состоянии
     display: block;
     position: absolute;
     background-color: #fff;
@@ -123,73 +168,67 @@
 }
 
 @media (min-width: $tablet) {
-  .page-header__wrap {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
   .main-nav {
     flex-grow: 1;
+  }
 
-    &__dropdown {
-      display: flex;
-    }
+  .main-nav__dropdown {
+    display: flex;
+  }
 
-    &__list,
-    &__user-list {
-      display: flex;
-    }
+  .main-nav__list,
+  .main-nav__user-list {
+    display: flex;
+  }
 
-    &__list {
-      padding-top: 88px;
-      margin-right: auto;
-      z-index: 10;
+  .main-nav__list {
+    padding-top: 88px;
+    margin-right: auto;
+    z-index: 10;
 
-      a {
-        font-size: 1.5rem;
-        line-height: 1.6;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-      }
-    }
-
-
-    &__user-list a {
+    a {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      padding-left: 0;
       padding-right: 0;
+      padding-bottom: 0;
       border-bottom: none;
     }
+  }
 
-    &__item a {
-      padding-top: 20px;
+  .main-nav__user-list a {
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  .main-nav__item a {
+    padding-top: 20px;
+  }
+
+  .main-nav__item:nth-child(odd) {
+    margin-right: 37px;
+  }
+
+  .main-nav__user-item:last-child a {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    svg {
+      margin-right: 30px;
     }
+  }
 
-    &__item:nth-child(odd) {
-      margin-right: 37px;
-    }
-
-    &__user-item:last-child a {
-      display: flex;
-      align-items: center;
-      padding-top: 32px;
-      padding-bottom: 32px;
-
-      svg {
-        margin-right: 30px;
-      }
-    }
-
-    &__user-item--hidden a {
-      font-size: 0;
-      padding-left: 32px;
-      padding-right: 32px;
-      padding-top: 35px;
-      padding-bottom: 34px;
-      max-width: 84px;
-      border-right: 1px solid $main-nav-border;
-      border-left: 1px solid $main-nav-border;
-    }
+  .main-nav__user-item--hidden a {
+    font-size: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 35px;
+    padding-bottom: 34px;
+    max-width: 84px;
+    border-right: 1px solid $main-nav-border;
+    border-left: 1px solid $main-nav-border;
   }
 }
 

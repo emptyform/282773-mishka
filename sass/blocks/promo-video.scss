@@ -1,80 +1,85 @@
 .promo-video {
   margin-bottom: 60px;
+}
 
-  &__wrap {
-    padding: 0 30px;
-    box-sizing: border-box;
+.promo-video__wrap {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.promo-video__header {
+  display: flex;
+  align-items: center;
+  padding: 25px 32px;
+
+  svg {
+    margin-right: 25px;
+    fill: $promo-item-bg;
+  }
+}
+
+.promo-video__play {
+  align-self: center;
+  position: relative;
+  margin-bottom: 25px;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.promo-video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 0.2s;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
   }
 
-  &__header {
-    display: flex;
-    align-items: center;
-    padding: 25px 32px;
-
-    svg {
-      margin-right: 25px;
-      fill: $promo-item-bg;
-    }
+  &:active {
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    opacity: 0.7;
   }
+}
 
-  &__play {
-    position: relative;
-    margin-bottom: 25px;
+.promo-video__title {
+  font-size: 1.7rem;
+  line-height: 1.4;
+}
 
-    img {
-      width: 100%;
-      display: block;
-    }
+.promo-video__descr-wrap {
+  padding: 0 33px;
+}
 
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      transition: 0.2s;
+.promo-video__descr {
+  font-size: 1.3rem;
+  line-height: 1.84;
+  margin-bottom: 25px;
+}
 
-      &:hover {
-        transform: translateX(-50%) translateY(-50%) scale(1.2);
-      }
+.promo-video__inner {
+  cursor: pointer;
+  border: 1px solid $products-card-border;
+  padding-bottom: 30px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
-      &:active {
-        transform: translateX(-50%) translateY(-50%) scale(0.8);
-        opacity: 0.7;
-      }
-    }
-  }
+.promo-video__btn:hover {
+  background-color: $btn;
+  color: $btn-font-color;
+}
 
-  &__title {
-    font-size: 1.7rem;
-    line-height: 1.4;
-  }
-
-  &__descr-wrap {
-    padding: 0 33px;
-  }
-
-  &__descr {
-    font-size: 1.3rem;
-    line-height: 1.84;
-    margin-bottom: 25px;
-  }
-
-  &__inner {
-    cursor: pointer;
-    border: 1px solid $products-card-border;
-    padding-bottom: 30px;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  &__btn:hover {
-    background-color: $btn;
-    color: $btn-font-color;
-  }
-
-  &__btn:active {
-    color: $btn-color-active;
-  }
+.promo-video__btn:active {
+  color: $btn-color-active;
 }
 
 @media (min-width: $tablet) {
@@ -143,53 +148,52 @@
   .promo-video {
     margin-bottom: 105px;
     padding-bottom: 0;
+  }
 
-    &__wrap {
-      max-width: 1150px;
-      margin: 0 auto;
+  .promo-video__wrap {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .promo-video__inner {
+    position: relative;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .promo-video__play {
+    width: 683px;
+    display: flex;
+  }
+
+  .promo-video__header {
+    position: absolute;
+    top: 45px;
+    right: 70px;
+    width: 210px;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+
+    svg {
+      margin-bottom: 28px;
     }
+  }
 
-    &__inner {
-      position: relative;
-      flex-direction: row;
-      padding-bottom: 0;
-    }
+  .promo-video__title br {
+    display: block;
+  }
 
-    &__play {
-      width: 683px;
-      display: flex;
-    }
+  .promo-video__descr-wrap {
+    width: 35%;
+    padding-left: 80px;
+    padding-right: 55px;
+    padding-bottom: 60px;
+    padding-top: 175px;
+    box-sizing: border-box;
+  }
 
-    &__header {
-      position: absolute;
-      top: 45px;
-      right: 75px;
-      width: 210px;
-      padding: 0;
-      flex-direction: column;
-      align-items: flex-start;
-
-      svg {
-        margin-bottom: 28px;
-      }
-    }
-
-    &__title br {
-      display: block;
-    }
-
-    &__descr-wrap {
-      width: 35%;
-      padding-left: 80px;
-      padding-right: 58px;
-      padding-bottom: 60px;
-      padding-top: 175px;
-      box-sizing: border-box;
-    }
-
-    &__descr {
-      margin-bottom: 45px;
-    }
-
+  .promo-video__descr {
+    margin-bottom: 45px;
   }
 }

@@ -1,16 +1,16 @@
 .catalog-promo {
   padding: 74px 30px;
   background-color: $promo-bg;
+}
 
-  &__text {
-    font-size: 2.7rem;
-    line-height: 1.1;
-    text-align: center;
-  }
+.catalog-promo__text {
+  font-size: 2.7rem;
+  line-height: 1.1;
+  text-align: center;
+}
 
-  &__info {
-    display: none;
-  }
+.catalog-promo__info {
+  display: none;
 }
 
 @media (min-width: $tablet) {
@@ -19,6 +19,7 @@
     margin-top: -45px;
     padding: 98px 0;
     border-top: 1px solid $promo-top-border;
+
 
     &::after {
       content: "";
@@ -30,21 +31,21 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center;
     }
+  }
 
-    &__info {
-      position: absolute;
-      top: 20px;
-      right: 50px;
-      display: block;
-      font-size: 1.5rem;
-      line-height: 1.6;
-      color: $btn;
-    }
+  .catalog-promo__info {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: $btn;
+  }
 
-    &__text {
-      font-size: 4.1rem;
-      line-height: 1.2;
-    }
+  .catalog-promo__text {
+    font-size: 4.1rem;
+    line-height: 1.2;
   }
 }
 
@@ -52,20 +53,20 @@
   .catalog-promo {
     margin-top: -74px;
     padding: 106px 0;
+  }
 
-    &__wrap {
-      position: relative;
+  .catalog-promo__wrap {
+    position: relative;
 
-      @include container();
-    }
+    @include container();
+  }
 
-    &__info {
-      top: -80px;
-    }
+  .catalog-promo__info {
+    top: -80px;
+  }
 
-    &__text {
-      font-size: 5.3rem;
-      line-height: 1.1;
-    }
+  .catalog-promo__text {
+    font-size: 5.3rem;
+    line-height: 1.1;
   }
 }

@@ -1,55 +1,55 @@
 .page-footer {
   background-color: $page-footer-bg;
+}
 
-  &__wrap {
-    padding: 0 30px;
+.page-footer__wrap {
+  padding: 0 30px;
+}
+
+.page-footer__logo {
+  display: none;
+  cursor: pointer;
+
+  &:hover svg {
+    fill: $footer-link-color-hover;
   }
 
-  &__logo {
-    display: none;
-    cursor: pointer;
+  &:active svg {
+    fill: $footer-link-color-active;
+  }
+}
 
-    &:hover svg {
-      fill: $footer-link-color-hover;
-    }
+.page-footer__copyright-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  line-height: 1;
+  font-weight: bold;
+  color: $link-font-color;
+  text-decoration: none;
+  padding: 23px 0;
 
-    &:active svg {
-      fill: $footer-link-color-active;
-    }
+  &:active {
+    color: $link-color-active;
   }
 
-  &__copyright-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.9rem;
-    line-height: 1;
-    font-weight: bold;
-    color: $link-font-color;
-    text-decoration: none;
-    padding: 23px 0;
-
-    &:active {
-      color: $link-color-active;
-    }
-
-    svg {
-      margin-left: 30px;
-      fill: $user-menu-hover;
-    }
-
-    &:hover svg {
-      fill: $footer-link-color-hover;
-    }
-
-    &:active svg {
-      fill: $footer-link-color-active;
-    }
+  svg {
+    margin-left: 30px;
+    fill: $user-menu-hover;
   }
 
-  &__social-list {
-    border-bottom: 1px solid $page-footer-border;
+  &:hover svg {
+    fill: $footer-link-color-hover;
   }
+
+  &:active svg {
+    fill: $footer-link-color-active;
+  }
+}
+
+.page-footer__social-list {
+  border-bottom: 1px solid $page-footer-border;
 }
 
 @media (min-width: $tablet) {
